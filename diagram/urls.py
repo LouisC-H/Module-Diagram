@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path('', views.map, name = 'Module map'),
-    path("<int:pk>/", views.detail, name = 'detail'),
+    path("<int:module_id>/", views.detail, name = 'detail'),
 ]
