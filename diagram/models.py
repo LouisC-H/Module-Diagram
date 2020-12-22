@@ -11,7 +11,7 @@ class Module(models.Model):
 
     uni_years = [('1','1'),('2','2'),('3','3'),('4','4'),('na','N/A')]
     uni_terms = [('1','1'),('2','2'),('3','3'),('12','1 and 2'),('na','N/A')]
-    departments = [('CSM', 'Camborne School of Mines'), ('Comp', 'Computing'), ('Eng', 'Engineering'), ('Maths', 'Mathematics'), ('NatSci', 'Natural Sciences'), ('Phy', 'Physics and Astronomy'), ('Bio', 'Biosciences')]
+    departments = [('CSM', 'Camborne School of Mines'), ('Comp', 'Computing'), ('Eng', 'Engineering'), ('Maths', 'Mathematics'), ('NatSci', 'Natural Sciences'), ('Phy', 'Physics and Astronomy'), ('Bio', 'Biosciences'), ('GEO','Geography']
     name = models.CharField(max_length = 200)
     code = models.CharField(max_length = 20)
     year = models.CharField(max_length = 20, choices = uni_years)
