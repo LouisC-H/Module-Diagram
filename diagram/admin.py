@@ -5,7 +5,7 @@ from .models import Module, Links, Lecturer
 class LinksInline(admin.TabularInline):
     model = Links
     fk_name = 'parent_module'
-    extra = 3
+    extra = 2
 
 class LecturerInline(admin.TabularInline):
     model = Lecturer
@@ -13,8 +13,8 @@ class LecturerInline(admin.TabularInline):
 
 class ModuleAdmin(admin.ModelAdmin):
     fieldsets = [
-        ('Basic information', {'fields': ['name', 'code', 'year', 'term', 'credits', 'core']}),
-        ('Additional information', {'fields': ['department', 'category', 'sub_category',  'ELE', 'website']}),
+        ('Basic information', {'fields': ['name', 'code', 'year', 'term', 'credits']}),
+        ('Additional information', {'fields': ['department', 'category', 'sub_category', 'website']}),
     ]
     inlines = [LinksInline, LecturerInline]
     list_display = ('code', 'name', 'department')
