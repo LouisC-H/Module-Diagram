@@ -1,5 +1,7 @@
 from django.db import models
 import datetime
+import numpy as np
+import math
 
 class Map():
 
@@ -14,23 +16,30 @@ class Map():
         self.Y2_credits = 120
         self.Y3_credits = 120
         self.Y4_credits = 120
-        self.chosen_departments = ['Phy','NatSci']
+        self.chosen_departments = ['Phy','NatSci','Bio']
         self.relevant_modules_ids = []
         self.module_names = []
         self.module_departments = []
         self.module_categories = []
         self.module_sub_categories = []
         self.module_position_col = []
-        self.module_position_row = []
+        self.module_year = []
+        self.module_term = []
         self.columns_dict = {}
+        self.table_data = []
         self.num_columns = 0
 
         self.find_relevant_modules()
+        self.generate_table_matrix()
+        for row in self.table_data:
+            print(row)
+            for column in row:
+                print(column)
 
     def find_relevant_modules(self):
         for department in self.chosen_departments:
             for module in Module.objects.filter(department = department):
-                print(module)
+
                 if module.department not in self.columns_dict:
                     self.columns_dict[module.department] = {}
                 if module.category not in self.columns_dict[module.department]:
@@ -47,13 +56,12 @@ class Map():
         self.module_categories.append(module.category)
         self.module_sub_categories.append(module.sub_category)
         self.module_position_col.append(self.determine_module_col(module))
-        self.module_position_row.append(self.determine_module_row(module))
+        self.determine_module_row(module)
 
     def determine_module_row(self, module):
 
         year_mod = 'na'
         term_mod = 'na'
-        row = 'na'
 
         if module.year == '1':
             year_mod = 0
@@ -77,11 +85,8 @@ class Map():
         else:
             term_mod = 'na'
 
-        if type(year_mod) and type(term_mod) != str:
-            row = 3*year_mod + term_mod
-
-        print(row)
-        return row
+        self.module_year.append(year_mod)
+        self.module_term.append(term_mod)
 
     def determine_module_col(self, module):
         column = 'na'
@@ -92,8 +97,27 @@ class Map():
                         for sub in category[1].items():
                             if module.sub_category == sub[0]:
                                 column = sub[1]
-                                print(column)
+
         return column
+
+    def generate_table_matrix(self):
+        #Add one list per row
+        for row in range(4):
+            self.table_data.append([])
+            #Add one sub-list per column
+            for column in range(self.num_columns):
+                self.table_data[row].append([])
+
+        for module_index in range(len(self.relevant_modules_ids)):
+            self.add_module_data(module_index)
+
+    def add_module_data(self, index):
+        double_term = 0
+        col = self.module_position_col[index]
+        row = self.module_year[index]
+
+        self.table_data[row][col].append([self.module_names[index],self.module_term[index]])
+
 
 class Module(models.Model):
 

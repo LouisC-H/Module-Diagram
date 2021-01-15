@@ -1,40 +1,62 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-<head>
-  <meta content="text/html; charset=ISO-8859-1"
- http-equiv="content-type">
-{% load static %}
-
-{% block style %}
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'diagram/style.css' %}">
+  {% block style %}
     <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
-{% endblock %}
-  <title></title>
-</head>
-<body>
+  {% endblock %}
+    <title>UoE module diagram</title>
+  </head>
+  <body>
+    {% if table_data %}
+      <table>
+      {% for row in table_data %}
+        <tr>
+        {% for column in row %}
+          <td>
+          {% for name in column %}
+            {% if name.1 == 0 %}
+              <div class="module" style = "align-self: flex-start">
+                {{name.0}}
+              </div>
+            {% elif name.1 == 0.5 %}
+              <div class="double_module" style = "align-self: flex-start">
+                {{name.0}}
+              </div>
+            {% elif name.1 == 1 %}
+              <div class="module" style = "align-self: center">
+                {{name.0}}
+              </div>
+            {% elif name.1 == 2 %}
+              <div class="module" style = "align-self: flex-end">
+                {{name.0}}
+              </div>
+            {% endif %}
+          {% endfor %}
+          </td>
+        {% endfor %}
+        </tr>
+      {% endfor %}
+      </table>
+    {% else %}
+        <p>No modules are available.</p>
+    {% endif %}
 
-{% if module_list %}
-    <ul>
-    {% for module in module_list %}
-        <li><a href="/diagram/{{ module.id }}/">{{ module.name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No modules are available.</p>
-{% endif %}
-
-<table
- style="text-align: left; background-color: rgb(255, 0, 0); width: 300px; height: 200px;"
- border="1" cellpadding="2" cellspacing="20">
-  <tbody>
-    <tr align="center">
-      <td style="background-color: rgb(255, 255, 255);">Physical
-methods in Biology and Medicine
-    </tr>
-    <tr align="center">
-      <td style="background-color: rgb(255, 255, 255);"><i class="fas fa-home"></i> Home</td></td>
-    </tr>
-  </tbody>
-</table>
-<br>
-</body>
+    <table
+     style="text-align: left; background-color: rgb(255, 0, 0); width: 300px; height: 200px;"
+     border="1" cellpadding="2" cellspacing="20">
+      <tbody>
+        <tr align="center">
+          <td style="background-color: rgb(255, 255, 255);">Physical
+    methods in Biology and Medicine
+        </tr>
+        <tr align="center">
+          <td style="background-color: rgb(255, 255, 255);"><i class="fas fa-home"></i> Home</td></td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </body>
 </html>
