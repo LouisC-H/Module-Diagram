@@ -10,39 +10,58 @@
     <title>UoE module diagram</title>
   </head>
   <body>
+
     {% if table_data %}
-      <table>
-      {% for row in table_data %}
-        <tr>
-        {% for column in row %}
-          <td>
-          {% for name in column %}
-            {% if name.1 == 0 %}
-              <div class="module" style = "align-self: flex-start">
-                {{name.0}}
-              </div>
-            {% elif name.1 == 0.5 %}
-              <div class="double_module" style = "align-self: flex-start">
-                {{name.0}}
-              </div>
-            {% elif name.1 == 1 %}
-              <div class="module" style = "align-self: center">
-                {{name.0}}
-              </div>
-            {% elif name.1 == 2 %}
-              <div class="module" style = "align-self: flex-end">
-                {{name.0}}
-              </div>
-            {% endif %}
+      <div class="table">
+      {% for column in table_data %}
+        <div class="column">
+        {% for row in column %}
+          <div class="cell">
+          {% for wrapper in row %}
+            <div class="wrapper">
+              {% for module in wrapper %}
+                  {% if module.1 == 0 %}
+
+                      <div class="module_T1">
+                        {{module.0}}
+                      </div>
+
+                  {% elif module.1 == 0.5 %}
+
+                    <div class="module_T1_2">
+                      {{module.0}}
+                    </div>
+
+                  {% elif module.1 == 1 %}
+
+                    <div class="module_T2">
+                      {{module.0}}
+                    </div>
+
+                  {% elif module.1 == 2 %}
+
+                    <div class="module_T3">
+                      {{module.0}}
+                    </div>
+
+                  {% elif module.1 == -1 %}
+
+                    <div class="Spacer">
+                    </div>
+
+                  {% endif %}
+              {% endfor %}
+            </div>
           {% endfor %}
-          </td>
+          </div>
         {% endfor %}
-        </tr>
+        </div>
       {% endfor %}
-      </table>
+      </div>
     {% else %}
         <p>No modules are available.</p>
     {% endif %}
+
 
     <table
      style="text-align: left; background-color: rgb(255, 0, 0); width: 300px; height: 200px;"

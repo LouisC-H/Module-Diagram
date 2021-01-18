@@ -4,6 +4,9 @@ import numpy as np
 import math
 
 class Map():
+    '''
+    This class sits in the background and organises all of the (relevant) modules from the database into a diagram.
+    '''
 
     def __init__(self):
 
@@ -11,7 +14,9 @@ class Map():
         self.init_map()
 
     def init_map(self):
-
+        '''
+        Initialise variables and call functions
+        '''
         self.Y1_credits = 120
         self.Y2_credits = 120
         self.Y3_credits = 120
@@ -31,12 +36,12 @@ class Map():
 
         self.find_relevant_modules()
         self.generate_table_matrix()
-        for row in self.table_data:
-            print(row)
-            for column in row:
-                print(column)
+        self.concentrate_modules()
 
     def find_relevant_modules(self):
+        '''
+
+        '''
         for department in self.chosen_departments:
             for module in Module.objects.filter(department = department):
 
@@ -102,22 +107,153 @@ class Map():
 
     def generate_table_matrix(self):
         #Add one list per row
-        for row in range(4):
+        for colummn in range(self.num_columns):
             self.table_data.append([])
             #Add one sub-list per column
-            for column in range(self.num_columns):
-                self.table_data[row].append([])
+            for row in range(4):
+                self.table_data[colummn].append([])
 
         for module_index in range(len(self.relevant_modules_ids)):
             self.add_module_data(module_index)
 
     def add_module_data(self, index):
-        double_term = 0
         col = self.module_position_col[index]
         row = self.module_year[index]
 
-        self.table_data[row][col].append([self.module_names[index],self.module_term[index]])
+        self.table_data[col][row].append([self.module_names[index],self.module_term[index]])
 
+    def concentrate_modules(self):
+        '''
+        Group the modules that could coexist on a single row, and add spacer elements
+        '''
+        #Add one list per row
+        for colummn in range(self.num_columns):
+            #Add one sub-list per column
+            for row in range(4):
+                cell_module_names = []
+                call_module_terms = []
+                for module in self.table_data[colummn][row]:
+                    if len(module) == 0:
+                        continue
+                    cell_module_names.append(module[0])
+                    call_module_terms.append(module[1])
+
+                print(self.table_data[colummn][row])
+                self.table_data[colummn][row] = self.group_modules([], cell_module_names, call_module_terms)
+                print(self.table_data[colummn][row])
+
+    def group_modules(self, data_grouped, names, terms):
+        '''
+        group modules by terms
+        '''
+        if len(names) == 0:
+            return data_grouped
+
+        if terms[0] == 0:
+            self.group_start_0(data_grouped, names, terms)
+
+        elif terms[0] == 0.5:
+            self.group_start_0_5(data_grouped, names, terms)
+
+        elif terms[0] == 1:
+            self.group_start_1(data_grouped, names, terms)
+
+        elif terms[0] == 2:
+            self.group_start_2(data_grouped, names, terms)
+
+        return data_grouped
+
+    def group_start_0(self, data_grouped, names, terms):
+        '''
+        Group a T1 module with a T2 and/or a T3, then remove them all from the list
+        '''
+
+        if 1 in terms:
+            T2_index = terms.index(1)
+            if 2 in terms:
+                T3_index = terms.index(2)
+                data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]],[names[T3_index],terms[T3_index]]])
+                del names[T2_index], terms[T2_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0]
+            else:
+                print([[names[0],terms[0]],[names[T2_index],terms[T2_index]]])
+                data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]]])
+                del names[T2_index], terms[T2_index], names[0], terms[0],
+
+        elif 2 in terms:
+            T3_index = terms.index(2)
+            data_grouped.append([[names[0],terms[0]], ["Spacer", -1], [names[T3_index],terms[T3_index]]])
+            del names[T3_index], terms[T3_index], names[0], terms[0],
+
+        else:
+            data_grouped.append([[names[0],terms[0]]])
+            del names[0], terms[0]
+
+        self.group_modules(data_grouped, names, terms)
+
+    def group_start_0_5(self, data_grouped, names, terms):
+        '''
+        Group a T1/2 and T3 module, if possible, then remove them from the list
+        '''
+        if 2 in terms:
+            T3_index = terms.index(2)
+            data_grouped.append([[names[0],terms[0]],[names[T3_index],terms[T3_index]]])
+            del names[T3_index], terms[T3_index], names[0], terms[0]
+
+        else:
+            data_grouped.append([[names[0],terms[0]]])
+            del names[0], terms[0]
+
+        self.group_modules(data_grouped, names, terms)
+
+    def group_start_1(self, data_grouped, names, terms):
+        '''
+        Group a T2 module with a T1 and/or a T3, then remove them all from the list
+        '''
+        if 0 in terms:
+            T1_index = terms.index(0)
+            if 2 in terms:
+                T3_index = terms.index(2)
+                data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
+                del names[T1_index], terms[T1_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0],
+            else:
+                data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]]])
+                del names[T1_index], terms[T1_index], names[0], terms[0],
+
+        elif 2 in terms:
+            T3_index = terms.index(2)
+            data_grouped.append([["Spacer", -1], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
+            del names[T3_index], terms[T3_index], names[0], terms[0],
+
+        else:
+            data_grouped.append([ ["Spacer", -1], [names[0],terms[0]]])
+            del names[0], terms[0]
+
+        self.group_modules(data_grouped, names, terms)
+
+    def group_start_2(self, data_grouped, names, terms):
+        '''
+        Group a T3 module with a T1 and/or a T2, then remove them all from the list
+        '''
+        if 0 in terms:
+            T1_index = terms.index(0)
+            if 1 in terms:
+                T2_index = terms.index(1)
+                data_grouped.append([[names[T1_index],terms[T1_index]],[names[T2_index],terms[T2_index]], [names[0],terms[0]]])
+                del names[T1_index], terms[T1_index], names[terms.index(1)], terms[terms.index(1)], names[0], terms[0],
+            else:
+                data_grouped.append([[names[T1_index],terms[T1_index]], ["Spacer", -1], [names[0],terms[0]]])
+                del names[T1_index], terms[T1_index], names[0], terms[0],
+
+        elif 1 in terms:
+            T2_index = terms.index(1)
+            data_grouped.append([ ["Spacer", -1], [names[T2_index],terms[T2_index]], [names[0],terms[0]]])
+            del  names[T2_index], terms[T2_index], names[0], terms[0],
+
+        else:
+            data_grouped.append([ ["Spacer", -1],  ["Spacer", -1], [names[0],terms[0]]])
+            del names[0], terms[0]
+
+        self.group_modules(data_grouped, names, terms)
 
 class Module(models.Model):
 
