@@ -5,7 +5,8 @@ import math
 
 class Map():
     '''
-    This class sits in the background and organises all of the (relevant) modules from the database into a diagram.
+    This class sits in the background and organises all of the (relevant)
+    modules from the database into a diagram.
     '''
 
     def __init__(self):
@@ -24,9 +25,6 @@ class Map():
         self.chosen_departments = ['Phy','NatSci','Bio']
         self.relevant_modules_ids = []
         self.module_names = []
-        self.module_departments = []
-        self.module_categories = []
-        self.module_sub_categories = []
         self.module_position_col = []
         self.module_year = []
         self.module_term = []
@@ -40,7 +38,8 @@ class Map():
 
     def find_relevant_modules(self):
         '''
-
+        For all of the modules in the databse, find whether their department is in the
+        self.chosen_departments list. If so, save the module details.
         '''
         for department in self.chosen_departments:
             for module in Module.objects.filter(department = department):
@@ -55,16 +54,18 @@ class Map():
                 self.populate_module_detail_lists(module)
 
     def populate_module_detail_lists(self, module):
+        '''
+        Save the details of relevant modules, and calculate their position in the diagram
+        '''
         self.relevant_modules_ids.append(module.id)
         self.module_names.append(module.name)
-        self.module_departments.append(module.department)
-        self.module_categories.append(module.category)
-        self.module_sub_categories.append(module.sub_category)
         self.module_position_col.append(self.determine_module_col(module))
         self.determine_module_row(module)
 
     def determine_module_row(self, module):
-
+        '''
+        Determine the module's vertical position in the diagram, from its year and term
+        '''
         year_mod = 'na'
         term_mod = 'na'
 
@@ -94,6 +95,10 @@ class Map():
         self.module_term.append(term_mod)
 
     def determine_module_col(self, module):
+        '''
+        Determine the module's horizontal position in the diagram, from its
+        department, category and sub-category
+        '''
         column = 'na'
         for department in self.columns_dict.items():
             if module.department == department[0]:
@@ -106,6 +111,10 @@ class Map():
         return column
 
     def generate_table_matrix(self):
+        '''
+        Create a matrix to order the modules within the diagram, then add the
+        modules to this matrix
+        '''
         #Add one list per row
         for colummn in range(self.num_columns):
             self.table_data.append([])
@@ -117,6 +126,10 @@ class Map():
             self.add_module_data(module_index)
 
     def add_module_data(self, index):
+        '''
+        Add each module to the self.table_data matrix, according to their
+        row and column position
+        '''
         col = self.module_position_col[index]
         row = self.module_year[index]
 
@@ -124,11 +137,11 @@ class Map():
 
     def concentrate_modules(self):
         '''
-        Group the modules that could coexist on a single row, and add spacer elements
+        Group the modules that could vertically coexist onto a single column, adding
+        spacer elements if necessary
         '''
-        #Add one list per row
+
         for colummn in range(self.num_columns):
-            #Add one sub-list per column
             for row in range(4):
                 cell_module_names = []
                 call_module_terms = []
@@ -138,47 +151,48 @@ class Map():
                     cell_module_names.append(module[0])
                     call_module_terms.append(module[1])
 
-                print(self.table_data[colummn][row])
                 self.table_data[colummn][row] = self.group_modules([], cell_module_names, call_module_terms)
-                print(self.table_data[colummn][row])
 
     def group_modules(self, data_grouped, names, terms):
         '''
-        group modules by terms
+        In order to group modules, first determine the term of the first module
+        in the list, then call the relevant function
         '''
         if len(names) == 0:
             return data_grouped
 
         if terms[0] == 0:
-            self.group_start_0(data_grouped, names, terms)
+            self.group_start_T1(data_grouped, names, terms)
 
         elif terms[0] == 0.5:
-            self.group_start_0_5(data_grouped, names, terms)
+            self.group_start_T1_and_2(data_grouped, names, terms)
 
         elif terms[0] == 1:
-            self.group_start_1(data_grouped, names, terms)
+            self.group_start_T2(data_grouped, names, terms)
 
         elif terms[0] == 2:
-            self.group_start_2(data_grouped, names, terms)
+            self.group_start_T3(data_grouped, names, terms)
 
         return data_grouped
 
-    def group_start_0(self, data_grouped, names, terms):
+    def group_start_T1(self, data_grouped, names, terms):
         '''
-        Group a T1 module with a T2 and/or a T3, then remove them all from the list
+        Group a T1 module with a T2 and/or a T3, then remove the grouped modules
+        from the list of modules to be grouped
         '''
-
+        #If there's a T2 module
         if 1 in terms:
             T2_index = terms.index(1)
+            #If there's a T3 module
             if 2 in terms:
                 T3_index = terms.index(2)
                 data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]],[names[T3_index],terms[T3_index]]])
                 del names[T2_index], terms[T2_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0]
             else:
-                print([[names[0],terms[0]],[names[T2_index],terms[T2_index]]])
                 data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]]])
                 del names[T2_index], terms[T2_index], names[0], terms[0],
 
+        #Elif there's a T3 module
         elif 2 in terms:
             T3_index = terms.index(2)
             data_grouped.append([[names[0],terms[0]], ["Spacer", -1], [names[T3_index],terms[T3_index]]])
@@ -190,10 +204,12 @@ class Map():
 
         self.group_modules(data_grouped, names, terms)
 
-    def group_start_0_5(self, data_grouped, names, terms):
+    def group_start_T1_and_2(self, data_grouped, names, terms):
         '''
-        Group a T1/2 and T3 module, if possible, then remove them from the list
+        Group a T(1 and 2) module with a T3, then remove the grouped modules
+        from the list of modules to be grouped
         '''
+        #If there's a T3 module
         if 2 in terms:
             T3_index = terms.index(2)
             data_grouped.append([[names[0],terms[0]],[names[T3_index],terms[T3_index]]])
@@ -205,12 +221,15 @@ class Map():
 
         self.group_modules(data_grouped, names, terms)
 
-    def group_start_1(self, data_grouped, names, terms):
+    def group_start_T2(self, data_grouped, names, terms):
         '''
-        Group a T2 module with a T1 and/or a T3, then remove them all from the list
+        Group a T2 module with a T1 and/or a T3, then remove the grouped modules
+        from the list of modules to be grouped
         '''
+        #If there's a T1 module
         if 0 in terms:
             T1_index = terms.index(0)
+            #If there's a T3 module
             if 2 in terms:
                 T3_index = terms.index(2)
                 data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
@@ -219,6 +238,7 @@ class Map():
                 data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]]])
                 del names[T1_index], terms[T1_index], names[0], terms[0],
 
+        #Elif there's a T3 module
         elif 2 in terms:
             T3_index = terms.index(2)
             data_grouped.append([["Spacer", -1], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
@@ -230,12 +250,15 @@ class Map():
 
         self.group_modules(data_grouped, names, terms)
 
-    def group_start_2(self, data_grouped, names, terms):
+    def group_start_T3(self, data_grouped, names, terms):
         '''
-        Group a T3 module with a T1 and/or a T2, then remove them all from the list
+        Group a T3 module with a T1 and/or a T3 and/or a T(1 and 2), then
+        remove the grouped modules from the list of modules to be grouped
         '''
+        #If there's a T1 module
         if 0 in terms:
             T1_index = terms.index(0)
+            #If there's a T2 module
             if 1 in terms:
                 T2_index = terms.index(1)
                 data_grouped.append([[names[T1_index],terms[T1_index]],[names[T2_index],terms[T2_index]], [names[0],terms[0]]])
@@ -244,10 +267,17 @@ class Map():
                 data_grouped.append([[names[T1_index],terms[T1_index]], ["Spacer", -1], [names[0],terms[0]]])
                 del names[T1_index], terms[T1_index], names[0], terms[0],
 
+        #Elf there's a T2 module
         elif 1 in terms:
             T2_index = terms.index(1)
             data_grouped.append([ ["Spacer", -1], [names[T2_index],terms[T2_index]], [names[0],terms[0]]])
             del  names[T2_index], terms[T2_index], names[0], terms[0],
+
+        #Elf there's a T(1 and 2) module
+        elif 0.5 in terms:
+            T1_2_index = terms.index(0.5)
+            data_grouped.append([[names[T1_2_index],terms[T1_2_index]], [names[0],terms[0]]])
+            del  names[T1_2_index], terms[T1_2_index], names[0], terms[0],
 
         else:
             data_grouped.append([ ["Spacer", -1],  ["Spacer", -1], [names[0],terms[0]]])
@@ -256,6 +286,9 @@ class Map():
         self.group_modules(data_grouped, names, terms)
 
 class Module(models.Model):
+    '''
+    This class is used to store information about the modules in the database
+    '''
 
     def __str__(self):
         return self.code
@@ -274,6 +307,9 @@ class Module(models.Model):
     website = models.URLField(max_length = 200, blank = True)
 
 class Links(models.Model):
+    '''
+    This class is used to store information about the links between modules in the database
+    '''
 
     link_types = [('pre','Pre-requisites'),('co','Co-requisites')]
     parent_module = models.ForeignKey(Module, related_name = 'parent_module', on_delete = models.CASCADE)
@@ -282,6 +318,9 @@ class Links(models.Model):
                                         default= 'pre',)
 
 class Lecturer(models.Model):
+    '''
+    This class is used to store information about a module's lecturers
+    '''
 
     def __str__(self):
         return '{self.first_name} {self.last_name}'.format(self=self)
