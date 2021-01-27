@@ -12,45 +12,77 @@
   <body>
 
     {% if table_data %}
-      <div class="table">
-      {% for column in table_data %}
-        <div class="column">
-        {% for row in column %}
-          <div class="cell">
-          {% for wrapper in row %}
-            <div class="wrapper">
-              {% for module in wrapper %}
-                  {% if module.1 == 0 %}
+      <div class="div_table">
+      {% for department in table_data %}
+        <div class="department" style="{{department.1}}">
+        {% for column in department.0 %}
+          <div class="column">
+          {% for row in column %}
+            <div class="cell">
+            {% for wrapper in row %}
+              <div class="wrapper">
+                {% for module in wrapper %}
+                    {% if module.1 == 0 %}
 
-                      <div class="module_T1">
-                        {{module.0}}
+                      <table class="module_T1">
+                        <tbody>
+                          <tr>
+                            <td class="module_name">{{module.0}}</td>
+                          </tr>
+                          <tr>
+                            <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                    {% elif module.1 == 0.5 %}
+
+                    <table class="module_T1_2">
+                      <tbody>
+                        <tr>
+                          <td class="module_name">{{module.0}} </td>
+                        </tr>
+                        <tr>
+                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    {% elif module.1 == 1 %}
+
+                    <table class="module_T2">
+                      <tbody>
+                        <tr>
+                          <td class="module_name">{{module.0}}</td>
+                        </tr>
+                        <tr>
+                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    {% elif module.1 == 2 %}
+
+                    <table class="module_T3">
+                      <tbody>
+                        <tr class="module_name">
+                          <td>{{module.0}}</td>
+                        </tr>
+                        <tr>
+                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    {% elif module.1 == -1 %}
+
+                      <div class="Spacer">
                       </div>
 
-                  {% elif module.1 == 0.5 %}
-
-                    <div class="module_T1_2">
-                      {{module.0}}
-                    </div>
-
-                  {% elif module.1 == 1 %}
-
-                    <div class="module_T2">
-                      {{module.0}}
-                    </div>
-
-                  {% elif module.1 == 2 %}
-
-                    <div class="module_T3">
-                      {{module.0}}
-                    </div>
-
-                  {% elif module.1 == -1 %}
-
-                    <div class="Spacer">
-                    </div>
-
-                  {% endif %}
-              {% endfor %}
+                    {% endif %}
+                {% endfor %}
+              </div>
+            {% endfor %}
             </div>
           {% endfor %}
           </div>
@@ -61,21 +93,5 @@
     {% else %}
         <p>No modules are available.</p>
     {% endif %}
-
-
-    <table
-     style="text-align: left; background-color: rgb(255, 0, 0); width: 300px; height: 200px;"
-     border="1" cellpadding="2" cellspacing="20">
-      <tbody>
-        <tr align="center">
-          <td style="background-color: rgb(255, 255, 255);">Physical
-    methods in Biology and Medicine
-        </tr>
-        <tr align="center">
-          <td style="background-color: rgb(255, 255, 255);"><i class="fas fa-home"></i> Home</td></td>
-        </tr>
-      </tbody>
-    </table>
-    <br>
   </body>
 </html>

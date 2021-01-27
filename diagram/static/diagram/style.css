@@ -1,16 +1,25 @@
 body{
 
-  font: normal 12px Arial, Helvetica, sans-serif;
+  font: 16px Arial, sans-serif;
 
   line-height: 1.6em;
 
   margin:0;
 }
 
+td{
+  background-color: rgb(255, 255, 255);
+}
 
-.table {
+.div_table {
   display: flex;
   flex-direction: row;
+}
+
+.department{
+  display: flex;
+  flex-direction: row;
+  border: 3px black solid;
 }
 
 .column {
@@ -20,63 +29,63 @@ body{
 
 .cell {
   display:flex;
-  height: 240px;
-  min-width: 130px;
-  border: 1px black solid;
+  height: 360px;
+  min-width: 200px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 1px;
+  border-color: black;
   flex-direction: row;
 }
 
 .wrapper {
   display:flex;
-  height: 240px;
-  width: 130px;
-  box-sizing: border-box;
+  height: 100%;
+  width: 200px;
   flex-direction: column;
-  align-self: center;
 }
 
 .module_T1{
-  background-color: #3399ff;
-  width: 130px;
-  height: 80px;
-  border: 3px green solid;
-  box-sizing: border-box;
-  align-self: center;
+  background-color: #CAC8C0;
+  width: 200px;
+  height: 120px;
+  border-spacing: 15px;
+  text-align: center;
 }
 
 .module_T1_2{
-
-  background-color: #3399ff;
-  width: 130px;
-  height: 160px;
-  border: 3px red solid;
-  box-sizing: border-box;
-  align-self: flex-start;
-  justify-content: flex-start;
+  background-color: #CAC8C0;
+  width: 200px;
+  height: 240px;
+  border-spacing: 15px;
+  text-align: center;
 }
 
 .module_T2{
-
-  background-color: #3399ff;
-  width: 130px;
-  height: 80px;
-  border: 3px blue solid;
-  box-sizing: border-box;
-  align-self: center;
-  justify-content: center;
+  background-color: #CAC8C0;
+  width: 200px;
+  height: 120px;
+  border-spacing: 15px;
+  text-align: center;
 }
 
 .module_T3{
+  background-color: #CAC8C0;
+  width: 200px;
+  height: 120px;
+  border-spacing: 15px;
+  text-align: center;
+}
 
-  background-color: #3399ff;
-  width: 130px;
-  height: 80px;
-  border: 3px pink solid;
-  box-sizing: border-box;
-  align-self: flex-end;
+.module_name{
+
+}
+
+.details_link{
+  height: 25px;
 }
 
 .spacer{
-  width: 130px;
-  height: 80px;
+  width: 200px;
+  height: 120px;
 }

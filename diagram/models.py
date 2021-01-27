@@ -22,15 +22,21 @@ class Map():
         self.Y2_credits = 120
         self.Y3_credits = 120
         self.Y4_credits = 120
+        self.potential_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
+        self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6', '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
         self.chosen_departments = ['Phy','NatSci','Bio']
+        self.chosen_colours = []
         self.relevant_modules_ids = []
         self.module_names = []
+        self.module_position_dept = []
         self.module_position_col = []
         self.module_year = []
         self.module_term = []
         self.columns_dict = {}
         self.table_data = []
         self.num_columns = 0
+        self.num_depts = 0
+        self.starting_column_index = []
 
         self.find_relevant_modules()
         self.generate_table_matrix()
@@ -45,11 +51,12 @@ class Map():
             for module in Module.objects.filter(department = department):
 
                 if module.department not in self.columns_dict:
-                    self.columns_dict[module.department] = {}
-                if module.category not in self.columns_dict[module.department]:
-                    self.columns_dict[module.department][module.category] = {}
-                if module.sub_category not in self.columns_dict[module.department][module.category]:
-                    self.columns_dict[module.department][module.category][module.sub_category] = self.num_columns
+                    self.columns_dict[module.department] = [{}, self.num_depts]
+                    self.num_depts +=1
+                if module.category not in self.columns_dict[module.department][0]:
+                    self.columns_dict[module.department][0][module.category] = {}
+                if module.sub_category not in self.columns_dict[module.department][0][module.category]:
+                    self.columns_dict[module.department][0][module.category][module.sub_category] = self.num_columns
                     self.num_columns +=1
                 self.populate_module_detail_lists(module)
 
@@ -59,7 +66,8 @@ class Map():
         '''
         self.relevant_modules_ids.append(module.id)
         self.module_names.append(module.name)
-        self.module_position_col.append(self.determine_module_col(module))
+
+        self.determine_module_col(module)
         self.determine_module_row(module)
 
     def determine_module_row(self, module):
@@ -100,14 +108,20 @@ class Map():
         department, category and sub-category
         '''
         column = 'na'
+        department = 'na'
+
         for department in self.columns_dict.items():
             if module.department == department[0]:
-                for category in department[1].items():
+                department_index = department[1][1]
+                for category in department[1][0].items():
                     if module.category == category[0]:
-                        for sub in category[1].items():
-                            if module.sub_category == sub[0]:
-                                column = sub[1]
+                        for sub_category in category[1].items():
+                            if module.sub_category == sub_category[0]:
+                                column = sub_category[1]
 
+
+        self.module_position_dept.append(department_index)
+        self.module_position_col.append(column)
         return column
 
     def generate_table_matrix(self):
@@ -115,12 +129,27 @@ class Map():
         Create a matrix to order the modules within the diagram, then add the
         modules to this matrix
         '''
-        #Add one list per row
-        for colummn in range(self.num_columns):
-            self.table_data.append([])
-            #Add one sub-list per column
-            for row in range(4):
-                self.table_data[colummn].append([])
+
+        row_num = 4
+        total_column_number = 0
+
+        #For each department
+        for department in self.columns_dict:
+            self.starting_column_index.append(total_column_number)
+            dept_matrix = []
+            dept_col_number = 0
+            #... find the number of columns...
+            for category in self.columns_dict[department][0]:
+                for sub_category in self.columns_dict[department][0][category]:
+                    dept_matrix.append([])
+                    for row in range(row_num):
+                        dept_matrix[dept_col_number].append([])
+                    dept_col_number += 1
+            total_column_number += dept_col_number
+            #...then append to larger list
+
+            dept_colour = self.dept_colour(department)
+            self.table_data.append([dept_matrix, f'background-color: {dept_colour}'])
 
         for module_index in range(len(self.relevant_modules_ids)):
             self.add_module_data(module_index)
@@ -130,28 +159,34 @@ class Map():
         Add each module to the self.table_data matrix, according to their
         row and column position
         '''
-        col = self.module_position_col[index]
+        dept = self.module_position_dept[index]
+        column_index_offset = self.starting_column_index[dept]
+        col = self.module_position_col[index] - column_index_offset
         row = self.module_year[index]
 
-        self.table_data[col][row].append([self.module_names[index],self.module_term[index]])
+        self.table_data[dept][0][col][row].append([self.module_names[index],self.module_term[index]])
 
     def concentrate_modules(self):
         '''
         Group the modules that could vertically coexist onto a single column, adding
         spacer elements if necessary
         '''
+        for department in range(self.num_depts):
+            max_num_columns = len(self.table_data[department][0])
+            for column in range(self.num_columns):
+                column_index_offset = self.starting_column_index[department]
+                col_index = column - column_index_offset
+                if 0 <= col_index < max_num_columns:
+                    for row in range(4):
+                        cell_module_names = []
+                        cell_module_terms = []
+                        for module in self.table_data[department][0][col_index][row]:
+                            if len(module) == 0:
+                                continue
+                            cell_module_names.append(module[0])
+                            cell_module_terms.append(module[1])
 
-        for colummn in range(self.num_columns):
-            for row in range(4):
-                cell_module_names = []
-                call_module_terms = []
-                for module in self.table_data[colummn][row]:
-                    if len(module) == 0:
-                        continue
-                    cell_module_names.append(module[0])
-                    call_module_terms.append(module[1])
-
-                self.table_data[colummn][row] = self.group_modules([], cell_module_names, call_module_terms)
+                        self.table_data[department][0][col_index][row] = self.group_modules([], cell_module_names, cell_module_terms)
 
     def group_modules(self, data_grouped, names, terms):
         '''
@@ -284,6 +319,13 @@ class Map():
             del names[0], terms[0]
 
         self.group_modules(data_grouped, names, terms)
+
+    def dept_colour(self, department):
+        '''
+        returns the department's columns' background colour
+        '''
+        return self.dept_colours[self.potential_departments.index(department)]
+
 
 class Module(models.Model):
     '''
