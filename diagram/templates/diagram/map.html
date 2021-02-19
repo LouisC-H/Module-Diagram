@@ -22,20 +22,21 @@
             {% for wrapper in row %}
               <div class="wrapper">
                 {% for module in wrapper %}
-                    {% if module.1 == 0 %}
 
-                      <table class="module_T1">
-                        <tbody>
-                          <tr>
-                            <td class="module_name">{{module.0}}</td>
-                          </tr>
-                          <tr>
-                            <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
-                          </tr>
-                        </tbody>
-                      </table>
+                  {% if module.1 == 1 %}
 
-                    {% elif module.1 == 0.5 %}
+                    <table class="module_T1">
+                      <tbody>
+                        <tr>
+                          <td class="module_name">{{module.0}}</td>
+                        </tr>
+                        <tr>
+                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  {% elif module.1 == 12 %}
 
                     <table class="module_T1_2">
                       <tbody>
@@ -48,7 +49,33 @@
                       </tbody>
                     </table>
 
-                    {% elif module.1 == 1 %}
+                  {% elif module.1 == 12 %}
+
+                    <table class="module_T1_2">
+                      <tbody>
+                        <tr>
+                          <td class="module_name">{{module.0}} </td>
+                        </tr>
+                        <tr>
+                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  {% elif module.1 == 123 %}
+
+                    <table class="module_T1_2_3">
+                      <tbody>
+                        <tr>
+                          <td class="module_name">{{module.0}} </td>
+                        </tr>
+                        <tr>
+                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                        </tr>
+                      </tbody>
+                    </table>
+
+                  {% elif module.1 == 2 %}
 
                     <table class="module_T2">
                       <tbody>
@@ -61,7 +88,7 @@
                       </tbody>
                     </table>
 
-                    {% elif module.1 == 2 %}
+                  {% elif module.1 == 3 %}
 
                     <table class="module_T3">
                       <tbody>
@@ -74,12 +101,12 @@
                       </tbody>
                     </table>
 
-                    {% elif module.1 == -1 %}
+                  {% elif module.1 == -1 %}
 
-                      <div class="Spacer">
-                      </div>
+                    <div class="Spacer">
+                    </div>
 
-                    {% endif %}
+                  {% endif %}
                 {% endfor %}
               </div>
             {% endfor %}
@@ -91,7 +118,7 @@
       {% endfor %}
       </div>
     {% else %}
-        <p>No modules are available.</p>
+      <p>No modules are available.</p>
     {% endif %}
   </body>
 </html>

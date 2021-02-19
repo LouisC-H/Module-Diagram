@@ -14,7 +14,7 @@ class LecturerInline(admin.TabularInline):
 class ModuleAdmin(admin.ModelAdmin):
     fieldsets = [
         ('Basic information', {'fields': ['name', 'code', 'year', 'term', 'credits']}),
-        ('Additional information', {'fields': ['department', 'category', 'sub_category', 'website']}),
+        ('Additional information', {'fields': ['department', 'category', 'sub_category']}),
     ]
     inlines = [LinksInline, LecturerInline]
     list_display = ('code', 'name', 'department')

@@ -25,15 +25,19 @@ td{
 .column {
   display: flex;
   flex-direction: column;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: grey;
 }
 
 .cell {
   display:flex;
-  height: 360px;
+  height: 450px;
   min-width: 200px;
   border-top-style: solid;
   border-bottom-style: solid;
-  border-width: 1px;
+  border-width: 3px;
   border-color: black;
   flex-direction: row;
 }
@@ -48,7 +52,7 @@ td{
 .module_T1{
   background-color: #CAC8C0;
   width: 200px;
-  height: 120px;
+  height: 150px;
   border-spacing: 15px;
   text-align: center;
 }
@@ -56,7 +60,15 @@ td{
 .module_T1_2{
   background-color: #CAC8C0;
   width: 200px;
-  height: 240px;
+  height: 300px;
+  border-spacing: 15px;
+  text-align: center;
+}
+
+.module_T1_2_3{
+  background-color: #CAC8C0;
+  width: 200px;
+  height: 450px;
   border-spacing: 15px;
   text-align: center;
 }
@@ -64,7 +76,7 @@ td{
 .module_T2{
   background-color: #CAC8C0;
   width: 200px;
-  height: 120px;
+  height: 150px;
   border-spacing: 15px;
   text-align: center;
 }
@@ -72,7 +84,7 @@ td{
 .module_T3{
   background-color: #CAC8C0;
   width: 200px;
-  height: 120px;
+  height: 150px;
   border-spacing: 15px;
   text-align: center;
 }
@@ -87,5 +99,5 @@ td{
 
 .spacer{
   width: 200px;
-  height: 120px;
+  height: 150px;
 }

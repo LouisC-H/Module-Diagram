@@ -18,25 +18,39 @@ class Map():
         '''
         Initialise variables and call functions
         '''
-        self.Y1_credits = 120
-        self.Y2_credits = 120
-        self.Y3_credits = 120
-        self.Y4_credits = 120
-        self.potential_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
-        self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6', '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
-        self.chosen_departments = ['Phy','NatSci','Bio']
-        self.chosen_colours = []
+
+        #Find a way to let users set this themselves
+        self.chosen_departments = ['Bio']
+        # self.chosen_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
+
+        #Find dimensions of data matrix
+        self.columns_dict = {}
+        self.num_depts = 0
+        self.num_columns = 0
+
+        #Store disordered module data
         self.relevant_modules_ids = []
         self.module_names = []
-        self.module_position_dept = []
-        self.module_position_col = []
+        self.module_codes = []
         self.module_year = []
         self.module_term = []
-        self.columns_dict = {}
-        self.table_data = []
-        self.num_columns = 0
-        self.num_depts = 0
+
+        #Position disordered modules within data matrix
+        self.module_position_dept = []
+        self.module_position_col = []
         self.starting_column_index = []
+
+        #Store data within matrix
+        self.table_data = []
+
+        #Beautify each department's columns with a background colour
+        self.potential_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
+        self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6', '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
+        self.chosen_colours = []
+
+        #Store data on inter-module links to be imported into the JS
+        self.module_links_codes = []
+        self.module_links_indices = []
 
         self.find_relevant_modules()
         self.generate_table_matrix()
@@ -66,6 +80,12 @@ class Map():
         '''
         self.relevant_modules_ids.append(module.id)
         self.module_names.append(module.name)
+        self.module_codes.append(module.code)
+        links = module.parent_module.all()
+        links_list = []
+        for link in links:
+            links_list.append(link.linked_module)
+        self.module_links_codes.append(links_list)
 
         self.determine_module_col(module)
         self.determine_module_row(module)
@@ -78,24 +98,26 @@ class Map():
         term_mod = 'na'
 
         if module.year == '1':
-            year_mod = 0
-        elif module.year == '2':
             year_mod = 1
-        elif module.year == '3':
+        elif module.year == '2':
             year_mod = 2
-        elif module.year == '4':
+        elif module.year == '3':
             year_mod = 3
+        elif module.year == '4':
+            year_mod = 4
         else:
             year_mod = 'na'
 
         if module.term == '1':
-            term_mod = 0
-        elif module.term == '2':
             term_mod = 1
-        elif module.term == '3':
+        elif module.term == '2':
             term_mod = 2
+        elif module.term == '3':
+            term_mod = 3
         elif module.term == '12':
-            term_mod = 0.5
+            term_mod = 12
+        elif module.term == '123':
+            term_mod = 123
         else:
             term_mod = 'na'
 
@@ -146,13 +168,22 @@ class Map():
                         dept_matrix[dept_col_number].append([])
                     dept_col_number += 1
             total_column_number += dept_col_number
-            #...then append to larger list
 
+            #...then append to larger list
             dept_colour = self.dept_colour(department)
             self.table_data.append([dept_matrix, f'background-color: {dept_colour}'])
 
+        #Once the matrix of nested tables has been initialised, populate it with data
         for module_index in range(len(self.relevant_modules_ids)):
             self.add_module_data(module_index)
+
+        self.code_to_indices()
+
+    def dept_colour(self, department):
+        '''
+        returns the department's columns' background colour
+        '''
+        return self.dept_colours[self.potential_departments.index(department)]
 
     def add_module_data(self, index):
         '''
@@ -162,15 +193,30 @@ class Map():
         dept = self.module_position_dept[index]
         column_index_offset = self.starting_column_index[dept]
         col = self.module_position_col[index] - column_index_offset
-        row = self.module_year[index]
+        row = self.module_year[index] - 1
 
-        self.table_data[dept][0][col][row].append([self.module_names[index],self.module_term[index]])
+        self.table_data[dept][0][col][row].append([self.module_names[index],self.module_term[index], index])
+
+    def code_to_indices(self):
+        '''
+        For each module involved in a link, use their code to find the module's
+        index in the disordered lists
+        '''
+
+        for module_links in self.module_links_codes:
+            linked_module_indices = []
+            for link in module_links:
+                print(link)
+                index = self.module_codes.index(str(link))
+                linked_module_indices.append(index)
+            self.module_links_indices.append(linked_module_indices)
 
     def concentrate_modules(self):
         '''
         Group the modules that could vertically coexist onto a single column, adding
         spacer elements if necessary
         '''
+
         for department in range(self.num_depts):
             max_num_columns = len(self.table_data[department][0])
             for column in range(self.num_columns):
@@ -196,16 +242,19 @@ class Map():
         if len(names) == 0:
             return data_grouped
 
-        if terms[0] == 0:
+        if terms[0] == 1:
             self.group_start_T1(data_grouped, names, terms)
 
-        elif terms[0] == 0.5:
+        elif terms[0] == 12:
             self.group_start_T1_and_2(data_grouped, names, terms)
 
-        elif terms[0] == 1:
-            self.group_start_T2(data_grouped, names, terms)
+        elif terms[0] == 123:
+            self.group_start_T1_2_3(data_grouped, names, terms)
 
         elif terms[0] == 2:
+            self.group_start_T2(data_grouped, names, terms)
+
+        elif terms[0] == 3:
             self.group_start_T3(data_grouped, names, terms)
 
         return data_grouped
@@ -215,21 +264,22 @@ class Map():
         Group a T1 module with a T2 and/or a T3, then remove the grouped modules
         from the list of modules to be grouped
         '''
+
         #If there's a T2 module
-        if 1 in terms:
-            T2_index = terms.index(1)
+        if 2 in terms:
+            T2_index = terms.index(2)
             #If there's a T3 module
-            if 2 in terms:
-                T3_index = terms.index(2)
+            if 3 in terms:
+                T3_index = terms.index(3)
                 data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]],[names[T3_index],terms[T3_index]]])
-                del names[T2_index], terms[T2_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0]
+                del names[T2_index], terms[T2_index], names[terms.index(3)], terms[terms.index(3)], names[0], terms[0]
             else:
                 data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]]])
                 del names[T2_index], terms[T2_index], names[0], terms[0],
 
         #Elif there's a T3 module
-        elif 2 in terms:
-            T3_index = terms.index(2)
+        elif 3 in terms:
+            T3_index = terms.index(3)
             data_grouped.append([[names[0],terms[0]], ["Spacer", -1], [names[T3_index],terms[T3_index]]])
             del names[T3_index], terms[T3_index], names[0], terms[0],
 
@@ -245,8 +295,8 @@ class Map():
         from the list of modules to be grouped
         '''
         #If there's a T3 module
-        if 2 in terms:
-            T3_index = terms.index(2)
+        if 3 in terms:
+            T3_index = terms.index(3)
             data_grouped.append([[names[0],terms[0]],[names[T3_index],terms[T3_index]]])
             del names[T3_index], terms[T3_index], names[0], terms[0]
 
@@ -256,26 +306,38 @@ class Map():
 
         self.group_modules(data_grouped, names, terms)
 
+    def group_start_T1_2_3(self, data_grouped, names, terms):
+        '''
+        Group a T(1 + 2 + 3) module on its own, then remove it from the list
+        of modules to be grouped
+        '''
+        #If there's a T3 module
+
+        data_grouped.append([[names[0],terms[0]]])
+        del names[0], terms[0]
+
+        self.group_modules(data_grouped, names, terms)
+
     def group_start_T2(self, data_grouped, names, terms):
         '''
         Group a T2 module with a T1 and/or a T3, then remove the grouped modules
         from the list of modules to be grouped
         '''
         #If there's a T1 module
-        if 0 in terms:
-            T1_index = terms.index(0)
+        if 1 in terms:
+            T1_index = terms.index(1)
             #If there's a T3 module
-            if 2 in terms:
-                T3_index = terms.index(2)
+            if 3 in terms:
+                T3_index = terms.index(3)
                 data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
-                del names[T1_index], terms[T1_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0],
+                del names[T1_index], terms[T1_index], names[terms.index(3)], terms[terms.index(3)], names[0], terms[0],
             else:
                 data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]]])
                 del names[T1_index], terms[T1_index], names[0], terms[0],
 
         #Elif there's a T3 module
-        elif 2 in terms:
-            T3_index = terms.index(2)
+        elif 3 in terms:
+            T3_index = terms.index(3)
             data_grouped.append([["Spacer", -1], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
             del names[T3_index], terms[T3_index], names[0], terms[0],
 
@@ -291,26 +353,26 @@ class Map():
         remove the grouped modules from the list of modules to be grouped
         '''
         #If there's a T1 module
-        if 0 in terms:
-            T1_index = terms.index(0)
+        if 1 in terms:
+            T1_index = terms.index(1)
             #If there's a T2 module
-            if 1 in terms:
-                T2_index = terms.index(1)
+            if 2 in terms:
+                T2_index = terms.index(2)
                 data_grouped.append([[names[T1_index],terms[T1_index]],[names[T2_index],terms[T2_index]], [names[0],terms[0]]])
-                del names[T1_index], terms[T1_index], names[terms.index(1)], terms[terms.index(1)], names[0], terms[0],
+                del names[T1_index], terms[T1_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0],
             else:
                 data_grouped.append([[names[T1_index],terms[T1_index]], ["Spacer", -1], [names[0],terms[0]]])
                 del names[T1_index], terms[T1_index], names[0], terms[0],
 
         #Elf there's a T2 module
-        elif 1 in terms:
-            T2_index = terms.index(1)
+        elif 2 in terms:
+            T2_index = terms.index(2)
             data_grouped.append([ ["Spacer", -1], [names[T2_index],terms[T2_index]], [names[0],terms[0]]])
             del  names[T2_index], terms[T2_index], names[0], terms[0],
 
         #Elf there's a T(1 and 2) module
-        elif 0.5 in terms:
-            T1_2_index = terms.index(0.5)
+        elif 12 in terms:
+            T1_2_index = terms.index(12)
             data_grouped.append([[names[T1_2_index],terms[T1_2_index]], [names[0],terms[0]]])
             del  names[T1_2_index], terms[T1_2_index], names[0], terms[0],
 
@@ -319,12 +381,6 @@ class Map():
             del names[0], terms[0]
 
         self.group_modules(data_grouped, names, terms)
-
-    def dept_colour(self, department):
-        '''
-        returns the department's columns' background colour
-        '''
-        return self.dept_colours[self.potential_departments.index(department)]
 
 
 class Module(models.Model):
@@ -337,7 +393,10 @@ class Module(models.Model):
 
     uni_years = [('1','1'),('2','2'),('3','3'),('4','4'),('na','N/A')]
     uni_terms = [('1','1'),('2','2'),('3','3'),('12','1 and 2'),('Other','Other')]
-    departments = [('CSM', 'Camborne School of Mines'), ('Comp', 'Computing'), ('Eng', 'Engineering'), ('Maths', 'Mathematics'), ('NatSci', 'Natural Sciences'), ('Phy', 'Physics and Astronomy'), ('Bio', 'Biosciences'), ('Geo', 'Geography'), ('Other','Other')]
+    departments = [('CSM', 'Camborne School of Mines'), ('Comp', 'Computing'),
+                    ('Eng', 'Engineering'), ('Maths', 'Mathematics'),
+                    ('NatSci', 'Natural Sciences'), ('Phy', 'Physics and Astronomy'),
+                    ('Bio', 'Biosciences'), ('Geo', 'Geography'), ('Other','Other')]
     name = models.CharField(max_length = 200)
     code = models.CharField(max_length = 20)
     year = models.CharField(max_length = 20, choices = uni_years)
@@ -346,7 +405,7 @@ class Module(models.Model):
     department = models.CharField(max_length = 200, choices = departments)
     category = models.CharField(max_length = 200, blank = True, default= 'na')
     sub_category = models.CharField(max_length = 200, blank = True, default= 'na')
-    website = models.URLField(max_length = 200, blank = True)
+    # website = models.URLField(max_length = 200, blank = True)
 
 class Links(models.Model):
     '''
