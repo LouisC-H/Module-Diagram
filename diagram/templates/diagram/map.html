@@ -1,9 +1,12 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+{% load static %}
+
 <html lang="en">
   <head>
     <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
   {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static 'diagram/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
   {% block style %}
     <link rel="stylesheet" type="text/css" href="{% static "fontawesome/css/all.min.css" %}" />
   {% endblock %}
