@@ -31,7 +31,10 @@
                           <td class="module_name">{{module.0}}</td>
                         </tr>
                         <tr>
-                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                          {% if module.2 %}
+                          <td class="details_link"><a href="{{ module.2 }}">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                          {% endif %}
                         </tr>
                       </tbody>
                     </table>
@@ -44,20 +47,10 @@
                           <td class="module_name">{{module.0}} </td>
                         </tr>
                         <tr>
-                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
-                        </tr>
-                      </tbody>
-                    </table>
-
-                  {% elif module.1 == 12 %}
-
-                    <table class="module_T1_2">
-                      <tbody>
-                        <tr>
-                          <td class="module_name">{{module.0}} </td>
-                        </tr>
-                        <tr>
-                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                          {% if module.2 %}
+                          <td class="details_link"><a href="{{ module.2 }}">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                          {% endif %}
                         </tr>
                       </tbody>
                     </table>
@@ -70,7 +63,10 @@
                           <td class="module_name">{{module.0}} </td>
                         </tr>
                         <tr>
-                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                          {% if module.2 %}
+                          <td class="details_link"><a href="{{ module.2 }}">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                          {% endif %}
                         </tr>
                       </tbody>
                     </table>
@@ -83,7 +79,10 @@
                           <td class="module_name">{{module.0}}</td>
                         </tr>
                         <tr>
-                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                          {% if module.2 %}
+                          <td class="details_link"><a href="{{ module.2 }}">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                          {% endif %}
                         </tr>
                       </tbody>
                     </table>
@@ -96,7 +95,10 @@
                           <td>{{module.0}}</td>
                         </tr>
                         <tr>
-                          <td class="details_link"><i class="fa fa-info-circle" aria-hidden="true"></i> Details</td>
+                          {% if module.2 %}
+                          <td class="details_link"><a href="{{ module.2 }}">
+                            <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                          {% endif %}
                         </tr>
                       </tbody>
                     </table>

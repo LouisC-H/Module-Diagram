@@ -44,6 +44,7 @@ class Command(BaseCommand):
             module.department = row['Department']
             module.category = row['Category']
             module.sub_category = row['Sub-category']
+            module.website = row['Module Descriptor']
 
             # module.Co_req = row['Co Req']
             # module.Pre_req = row['Pre Req']

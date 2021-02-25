@@ -34,6 +34,7 @@ class Map():
         self.module_codes = []
         self.module_year = []
         self.module_term = []
+        self.module_website = []
 
         #Position disordered modules within data matrix
         self.module_position_dept = []
@@ -81,6 +82,7 @@ class Map():
         self.relevant_modules_ids.append(module.id)
         self.module_names.append(module.name)
         self.module_codes.append(module.code)
+        self.module_website.append(module.website)
         links = module.parent_module.all()
         links_list = []
         for link in links:
@@ -195,7 +197,7 @@ class Map():
         col = self.module_position_col[index] - column_index_offset
         row = self.module_year[index] - 1
 
-        self.table_data[dept][0][col][row].append([self.module_names[index],self.module_term[index], index])
+        self.table_data[dept][0][col][row].append([self.module_names[index], self.module_term[index], self.module_website[index]])
 
     def code_to_indices(self):
         '''
@@ -226,15 +228,17 @@ class Map():
                     for row in range(4):
                         cell_module_names = []
                         cell_module_terms = []
+                        cell_module_websites = []
                         for module in self.table_data[department][0][col_index][row]:
                             if len(module) == 0:
                                 continue
                             cell_module_names.append(module[0])
                             cell_module_terms.append(module[1])
+                            cell_module_websites.append(module[2])
 
-                        self.table_data[department][0][col_index][row] = self.group_modules([], cell_module_names, cell_module_terms)
+                        self.table_data[department][0][col_index][row] = self.group_modules([], cell_module_names, cell_module_terms, cell_module_websites)
 
-    def group_modules(self, data_grouped, names, terms):
+    def group_modules(self, data_grouped, names, terms, websites):
         '''
         In order to group modules, first determine the term of the first module
         in the list, then call the relevant function
@@ -243,23 +247,23 @@ class Map():
             return data_grouped
 
         if terms[0] == 1:
-            self.group_start_T1(data_grouped, names, terms)
+            self.group_start_T1(data_grouped, names, terms, websites)
 
         elif terms[0] == 12:
-            self.group_start_T1_and_2(data_grouped, names, terms)
+            self.group_start_T1_and_2(data_grouped, names, terms, websites)
 
         elif terms[0] == 123:
-            self.group_start_T1_2_3(data_grouped, names, terms)
+            self.group_start_T1_2_3(data_grouped, names, terms, websites)
 
         elif terms[0] == 2:
-            self.group_start_T2(data_grouped, names, terms)
+            self.group_start_T2(data_grouped, names, terms, websites)
 
         elif terms[0] == 3:
-            self.group_start_T3(data_grouped, names, terms)
+            self.group_start_T3(data_grouped, names, terms, websites)
 
         return data_grouped
 
-    def group_start_T1(self, data_grouped, names, terms):
+    def group_start_T1(self, data_grouped, names, terms, websites):
         '''
         Group a T1 module with a T2 and/or a T3, then remove the grouped modules
         from the list of modules to be grouped
@@ -271,25 +275,25 @@ class Map():
             #If there's a T3 module
             if 3 in terms:
                 T3_index = terms.index(3)
-                data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]],[names[T3_index],terms[T3_index]]])
-                del names[T2_index], terms[T2_index], names[terms.index(3)], terms[terms.index(3)], names[0], terms[0]
+                data_grouped.append([[names[0],terms[0], websites[0]],[names[T2_index],terms[T2_index], websites[T2_index]],[names[T3_index],terms[T3_index], websites[T3_index]]])
+                del names[T2_index], terms[T2_index], websites[T2_index], names[terms.index(3)], websites[terms.index(3)], terms[terms.index(3)], names[0], terms[0]
             else:
-                data_grouped.append([[names[0],terms[0]],[names[T2_index],terms[T2_index]]])
-                del names[T2_index], terms[T2_index], names[0], terms[0],
+                data_grouped.append([[names[0],terms[0], websites[0]],[names[T2_index],terms[T2_index], websites[T2_index]]])
+                del names[T2_index], terms[T2_index], websites[T2_index], names[0], terms[0], websites[0],
 
         #Elif there's a T3 module
         elif 3 in terms:
             T3_index = terms.index(3)
-            data_grouped.append([[names[0],terms[0]], ["Spacer", -1], [names[T3_index],terms[T3_index]]])
-            del names[T3_index], terms[T3_index], names[0], terms[0],
+            data_grouped.append([[names[0],terms[0], websites[0]], ["Spacer", -1], [names[T3_index],terms[T3_index], websites[T3_index]]])
+            del names[T3_index], terms[T3_index], websites[T3_index], names[0], terms[0], websites[0],
 
         else:
-            data_grouped.append([[names[0],terms[0]]])
-            del names[0], terms[0]
+            data_grouped.append([[names[0],terms[0], websites[0]]])
+            del names[0], terms[0], websites[0]
 
-        self.group_modules(data_grouped, names, terms)
+        self.group_modules(data_grouped, names, terms, websites)
 
-    def group_start_T1_and_2(self, data_grouped, names, terms):
+    def group_start_T1_and_2(self, data_grouped, names, terms, websites):
         '''
         Group a T(1 and 2) module with a T3, then remove the grouped modules
         from the list of modules to be grouped
@@ -297,57 +301,58 @@ class Map():
         #If there's a T3 module
         if 3 in terms:
             T3_index = terms.index(3)
-            data_grouped.append([[names[0],terms[0]],[names[T3_index],terms[T3_index]]])
-            del names[T3_index], terms[T3_index], names[0], terms[0]
+            data_grouped.append([[names[0],terms[0]], websites[0],[names[T3_index],terms[T3_index], websites[T3_index]]])
+            del names[T3_index], terms[T3_index], websites[T3_index], names[0], terms[0], websites[0]
 
         else:
-            data_grouped.append([[names[0],terms[0]]])
-            del names[0], terms[0]
+            data_grouped.append([[names[0],terms[0], websites[0]]])
+            del names[0], terms[0], websites[0]
 
-        self.group_modules(data_grouped, names, terms)
+        self.group_modules(data_grouped, names, terms, websites)
 
-    def group_start_T1_2_3(self, data_grouped, names, terms):
+    def group_start_T1_2_3(self, data_grouped, names, terms, websites):
         '''
         Group a T(1 + 2 + 3) module on its own, then remove it from the list
         of modules to be grouped
         '''
         #If there's a T3 module
 
-        data_grouped.append([[names[0],terms[0]]])
-        del names[0], terms[0]
+        data_grouped.append([[names[0],terms[0], websites[0]]])
+        del names[0], terms[0], websites[0]
 
-        self.group_modules(data_grouped, names, terms)
+        self.group_modules(data_grouped, names, terms, websites)
 
-    def group_start_T2(self, data_grouped, names, terms):
+    def group_start_T2(self, data_grouped, names, terms, websites):
         '''
         Group a T2 module with a T1 and/or a T3, then remove the grouped modules
         from the list of modules to be grouped
         '''
+
         #If there's a T1 module
         if 1 in terms:
             T1_index = terms.index(1)
             #If there's a T3 module
             if 3 in terms:
                 T3_index = terms.index(3)
-                data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
-                del names[T1_index], terms[T1_index], names[terms.index(3)], terms[terms.index(3)], names[0], terms[0],
+                data_grouped.append([[names[T1_index],terms[T1_index]], websites[T1_index], [names[0],terms[0], websites[0]], [names[T3_index],terms[T3_index], websites[T3_index]]])
+                del names[T1_index], terms[T1_index], websites[T1_index], names[terms.index(3)], websites[terms.index(3)], terms[terms.index(3)], names[0], terms[0], websites[0]
             else:
-                data_grouped.append([[names[T1_index],terms[T1_index]], [names[0],terms[0]]])
-                del names[T1_index], terms[T1_index], names[0], terms[0],
+                data_grouped.append([[names[T1_index],terms[T1_index], websites[T1_index]], [names[0],terms[0], websites[0]]])
+                del names[T1_index], terms[T1_index], websites[T1_index], names[0], terms[0], websites[0],
 
         #Elif there's a T3 module
         elif 3 in terms:
             T3_index = terms.index(3)
-            data_grouped.append([["Spacer", -1], [names[0],terms[0]], [names[T3_index],terms[T3_index]]])
-            del names[T3_index], terms[T3_index], names[0], terms[0],
+            data_grouped.append([["Spacer", -1], [names[0], terms[0], websites[0]], [names[T3_index], terms[T3_index], websites[T3_index]]])
+            del names[T3_index], terms[T3_index], websites[T3_index], names[0], terms[0], websites[0],
 
         else:
-            data_grouped.append([ ["Spacer", -1], [names[0],terms[0]]])
-            del names[0], terms[0]
+            data_grouped.append([ ["Spacer", -1], [names[0], terms[0], websites[0]]])
+            del names[0], terms[0], websites[0]
 
-        self.group_modules(data_grouped, names, terms)
+        self.group_modules(data_grouped, names, terms, websites)
 
-    def group_start_T3(self, data_grouped, names, terms):
+    def group_start_T3(self, data_grouped, names, terms, websites):
         '''
         Group a T3 module with a T1 and/or a T3 and/or a T(1 and 2), then
         remove the grouped modules from the list of modules to be grouped
@@ -358,29 +363,29 @@ class Map():
             #If there's a T2 module
             if 2 in terms:
                 T2_index = terms.index(2)
-                data_grouped.append([[names[T1_index],terms[T1_index]],[names[T2_index],terms[T2_index]], [names[0],terms[0]]])
-                del names[T1_index], terms[T1_index], names[terms.index(2)], terms[terms.index(2)], names[0], terms[0],
+                data_grouped.append([[names[T1_index],terms[T1_index], websites[T1_index]],[names[T2_index],terms[T2_index]], [names[0],terms[0], websites[0]]])
+                del names[T1_index], terms[T1_index], websites[T1_index], names[terms.index(2)], websites[terms.index(2)], terms[terms.index(2)], names[0], terms[0], websites[0],
             else:
-                data_grouped.append([[names[T1_index],terms[T1_index]], ["Spacer", -1], [names[0],terms[0]]])
-                del names[T1_index], terms[T1_index], names[0], terms[0],
+                data_grouped.append([[names[T1_index],terms[T1_index], websites[T1_index]], ["Spacer", -1], [names[0],terms[0], websites[0]]])
+                del names[T1_index], terms[T1_index], websites[T1_index], names[0], terms[0], websites[0]
 
         #Elf there's a T2 module
         elif 2 in terms:
             T2_index = terms.index(2)
-            data_grouped.append([ ["Spacer", -1], [names[T2_index],terms[T2_index]], [names[0],terms[0]]])
-            del  names[T2_index], terms[T2_index], names[0], terms[0],
+            data_grouped.append([ ["Spacer", -1], [names[T2_index],terms[T2_index], websites[T2_index]], [names[0],terms[0], websites[0]]])
+            del  names[T2_index], terms[T2_index], websites[T2_index], names[0], terms[0], websites[0]
 
         #Elf there's a T(1 and 2) module
         elif 12 in terms:
             T1_2_index = terms.index(12)
-            data_grouped.append([[names[T1_2_index],terms[T1_2_index]], [names[0],terms[0]]])
-            del  names[T1_2_index], terms[T1_2_index], names[0], terms[0],
+            data_grouped.append([[names[T1_2_index],terms[T1_2_index]], websites[T1_2_index], [names[0],terms[0], websites[0]]])
+            del  names[T1_2_index], terms[T1_2_index], websites[T1_2_index], names[0], terms[0], websites[0],
 
         else:
-            data_grouped.append([ ["Spacer", -1],  ["Spacer", -1], [names[0],terms[0]]])
-            del names[0], terms[0]
+            data_grouped.append([ ["Spacer", -1],  ["Spacer", -1], [names[0],terms[0], websites[0]]])
+            del names[0], terms[0], websites[0]
 
-        self.group_modules(data_grouped, names, terms)
+        self.group_modules(data_grouped, names, terms, websites)
 
 
 class Module(models.Model):
@@ -405,7 +410,7 @@ class Module(models.Model):
     department = models.CharField(max_length = 200, choices = departments)
     category = models.CharField(max_length = 200, blank = True, default= 'na')
     sub_category = models.CharField(max_length = 200, blank = True, default= 'na')
-    # website = models.URLField(max_length = 200, blank = True)
+    website = models.URLField(max_length = 200, blank = True)
 
 class Links(models.Model):
     '''
