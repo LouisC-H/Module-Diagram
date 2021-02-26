@@ -22,14 +22,12 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
 
-        if Module.objects.exists(): #or Requisites.objects.exists():
+        if Module.objects.exists():
             print('Module data already loaded...exiting.')
             print(ALREDY_LOADED_ERROR_MESSAGE)
             return
-        #print("Creating requisites data")
-        #for vaccine_name in VACCINES_NAMES:
-            #vac = Vaccine(name=vaccine_name)
-            #vac.save()
+
+
         print("Loading module data")
         for row in DictReader(open('./mod_info.csv')):
 
@@ -46,8 +44,9 @@ class Command(BaseCommand):
             module.sub_category = row['Sub-category']
             module.website = row['Module Descriptor']
 
-            # module.Co_req = row['Co Req']
-            # module.Pre_req = row['Pre Req']
+            module.pre_req = row['Pre Req']
+            module.co_req = row['Co Req']
+
             # module.lecturer = row['Lecturer']
 
             # module.core_Natural_Sciences = row['Core Natural Sciences']
@@ -59,7 +58,7 @@ class Command(BaseCommand):
             # module.core_Biological_and_Medicinal_Chemistry = row['Core Biological and Medicinal Chemistry']
             # module.natural_Sciences_History = row['Natural Science History']
             # module.topic_pathway = row['Topic Pathway']
-            # module.module_descriptor = row['Module Descriptor']
+
 
 
             module.save()

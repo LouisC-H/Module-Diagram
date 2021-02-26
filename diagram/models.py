@@ -57,14 +57,14 @@ class Map():
         self.generate_table_matrix()
         self.concentrate_modules()
 
+
     def find_relevant_modules(self):
         '''
         For all of the modules in the databse, find whether their department is in the
-        self.chosen_departments list. If so, save the module details.
+        self.chosen_departments list. If so, save the module details (by calling a new function).
         '''
         for department in self.chosen_departments:
             for module in Module.objects.filter(department = department):
-
                 if module.department not in self.columns_dict:
                     self.columns_dict[module.department] = [{}, self.num_depts]
                     self.num_depts +=1
@@ -83,11 +83,11 @@ class Map():
         self.module_names.append(module.name)
         self.module_codes.append(module.code)
         self.module_website.append(module.website)
-        links = module.parent_module.all()
-        links_list = []
-        for link in links:
-            links_list.append(link.linked_module)
-        self.module_links_codes.append(links_list)
+
+        link_list = []
+        link_list.append(module.pre_req.split(", "))
+        link_list.append(module.co_req.split(", "))
+        self.module_links_codes.append(link_list)
 
         self.determine_module_col(module)
         self.determine_module_row(module)
@@ -207,10 +207,15 @@ class Map():
 
         for module_links in self.module_links_codes:
             linked_module_indices = []
-            for link in module_links:
-                print(link)
-                index = self.module_codes.index(str(link))
-                linked_module_indices.append(index)
+            for list in module_links:
+                for link in list:
+                    if link != "N/A":
+                        if link in self.module_codes:
+                            index = self.module_codes.index(str(link))
+                            linked_module_indices.append(index)
+                        else:
+                            print(f"Link is not in the module list: _{link}_")
+
             self.module_links_indices.append(linked_module_indices)
 
     def concentrate_modules(self):
@@ -411,6 +416,8 @@ class Module(models.Model):
     category = models.CharField(max_length = 200, blank = True, default= 'na')
     sub_category = models.CharField(max_length = 200, blank = True, default= 'na')
     website = models.URLField(max_length = 200, blank = True)
+    co_req = models.CharField(max_length = 200, blank = True, default = "N/A")
+    pre_req = models.CharField(max_length = 200, blank = True, default = "N/A")
 
 class Links(models.Model):
     '''
