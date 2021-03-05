@@ -53,10 +53,9 @@
     <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Module Selection Aid</h1>
-        <p class="lead text-muted">Please select the module you are interested in to find out more information</p>
+        <p class="lead text-muted">Please select the what tool would be most useful to you</p>
         <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+          <a href="mailto:e.ogrady@exeter.ac.uk" class="btn btn-primary my-2">Email Contact</a>
         </p>
         <img src="{% static 'exeter.jpg' %}" height=300></img>
       </div>
@@ -68,12 +67,9 @@
 
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
 
-        {% for module in modules.all %}
         <div class="col">
-          <a href="{% url 'detail' module.id %}">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" src = "{{ department.image.url }}" width="100%" height="225"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
+            <svg class="bd-placeholder-img card-img-top" src = "holder.js/100px225?theme=thumb&bg=55595c&fg=eceef&text=Thumbnail" alt="Card image cap">
             <div class="card-body">
               <p class="card-text"> {{ module.code }} </p>
               <div class="d-flex justify-content-between align-items-center">
@@ -87,7 +83,6 @@
           </a>
         </div>
 
-        {% endfor %}
       </div>
     </div>
   </div>
