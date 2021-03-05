@@ -20,12 +20,20 @@ from django.conf import settings
 from django.conf.urls.static import static
 from department import views
 
+#urlpatterns = [
+#    path('diagram/', include('diagram.urls')),
+#    path('admin/', admin.site.urls),
+#    path('homepage/',views.homepage, name='homepage'),
+#    path('module/<int:module_id>',views.detail,name='detail'),
+#] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+
 urlpatterns = [
-    path('diagram/', include('diagram.urls')),
+    path('homepage/diagrams', include('diagram.urls'), name = 'diagrams'),
     path('admin/', admin.site.urls),
     path('homepage/',views.homepage, name='homepage'),
-    path('module/<int:module_id>',views.detail,name='detail'),
+    #path('module/<int:module_id>',views.detail,name='detail'),
 ] + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+
 
 urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_URL)
 #     path('homepage/', views.homepage, name='homepage'),
