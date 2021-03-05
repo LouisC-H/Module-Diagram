@@ -69,13 +69,14 @@
 
         <div class="col">
           <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" src = "holder.js/100px225?theme=thumb&bg=55595c&fg=eceef&text=Thumbnail" alt="Card image cap">
+            <img src = "{% static 'universe.jpg' %}"> </img>
             <div class="card-body">
               <p class="card-text"> {{ module.code }} </p>
               <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
+                  <div class="btn-group">
+                    <button type="button" class="btn btn-sm btn-outline-secondary">
+                    <a href = "diagrams" class="btn btn-primary my-2">Diagram</a> </button>
+                  </div>
                 <small class="text-muted"></small>
               </div>
             </div>
