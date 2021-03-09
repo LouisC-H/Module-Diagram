@@ -21,7 +21,7 @@ class Map():
 
         #Find a way to let users set this themselves
         # self.chosen_departments = ['Bio']
-        self.chosen_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
+        self.chosen_departments = ['NatSci', 'Phy', 'Bio','Maths']
 
         #Find dimensions of data matrix
         self.columns_dict = {}

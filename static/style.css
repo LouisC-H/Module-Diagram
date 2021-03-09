@@ -16,6 +16,37 @@ td{
   flex-direction: row;
 }
 
+.first_dept {
+  display: flex;
+  flex-direction: row;
+  border: 3px black solid;
+  background-color: black;
+}
+
+.first_column {
+  display: flex;
+  flex-direction: column;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+.first_cell {
+  display:flex;
+  height: 450px;
+  min-width: 30px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-width: 3px;
+  border-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
 .department{
   display: flex;
   flex-direction: row;

@@ -1,4 +1,6 @@
 Core name,Code,Department,Year,Term,Credits,Lecturer,Core Natural Sciences,Core Mathematics,Core Physics (BPhys),Core Biological Sciences,Core Biochemistry,Core Biological and Medicinal Chemistry,Physics (MPhys),Pre Req,Co Req,Natural Science History,Topic Pathway,Module Descriptor,Category,Sub-category
+Frontiers in Science 1,NSC1005,NatSci,1,12,15,,Y,N,N,N,N,N,N,N/A,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1005&ay=2020/1,Core,
+Practical Physics I,PHY1027,Phy,1,12,15,,,,,,,,,N/A,"PHY1021, PHY1022, PHY1023, PHY1024",,,https://newton.ex.ac.uk/handbook/modules/PHY1027.html,Misc,
 Animals,BIO1331,Bio,1,1,15,,,,,,,,,N/A,N/A,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1331&ay=2020/1,Animals and Marine,
 Biochemistry,BIO1332,Bio,1,1,15,,,,,,,,,N/A,N/A,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1332&ay=2020/1,Chemistry,
 Fundamental Principles for Bioscientists,BIO1333,Bio,1,123,15,,,,,,,,,N/A,N/A,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1333&ay=2020/1,Misc,
@@ -113,7 +115,6 @@ Ergodic Theory,MTHM048,Maths,4,2,15,,N,,N,N,N,N,N,N/A,N/A,N,,https://intranet.ex
 Mathematics and Computing: Integrative Tools for Natural Sciences ,NSC1002,NatSci,1,12,30,,Y,N,N,N,N,N,N,N/A,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1002&ay=2020/1,Coding,
 Foundations in Natural Science,NSC1003,NatSci,1,12,60,,Y,N,N,N,N,N,N,N/A,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1003&ay=2020/1,Science,
 Experimental Science,NSC1004,NatSci,1,12,15,,Y,N,N,N,N,N,N,N/A,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1004&ay=2020/1,Core,
-Frontiers in Science 1,NSC1005,NatSci,1,12,15,,Y,N,N,N,N,N,N,N/A,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1005&ay=2020/1,Core,
 Frontiers in Science 2,NSC2001,NatSci,2,12,30,,Y,N,N,N,N,N,N,"NSC1002, NSC1004, NSC1005",N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC2001&ay=2020/1,Core,
 Physical Chemistry,NSC2002,NatSci,2,2,15,,N,N,N,N,N,N,N,NSC1003,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC2002&ay=2020/1,Science,
 Introduction to Numerics and Simulation for Scientists,NSC2003,NatSci,2,1,15,,N,N,N,N,N,N,N,NSC1002,N/A,Y,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC2003&ay=2020/1,Coding,
@@ -136,7 +137,6 @@ Waves and Optics,PHY1023,Phy,1,2,15,,,,,,,,,"PHY1021, PHY1025",N/A,,,https://new
 Properties of Matter,PHY1024,Phy,1,2,15,,,,,,,,,"PHY1021, PHY1025",N/A,,,https://newton.ex.ac.uk/handbook/modules/PHY1024.html,"Emag, Quantum, Condensed",
 Mathematics Skills,PHY1025,Phy,1,1,15,,,,,,,,,N/A,N/A,,,https://newton.ex.ac.uk/handbook/modules/PHY1025.html,"Coding, Maths",
 Mathematics for Physicists,PHY1026,Phy,1,2,15,,,,,,,,,PHY1025,N/A,,,https://newton.ex.ac.uk/handbook/modules/PHY1026.html,"Coding, Maths",
-Practical Physics I,PHY1027,Phy,1,12,15,,,,,,,,,N/A,"PHY1021, PHY1022, PHY1023, PHY1024",,,https://newton.ex.ac.uk/handbook/modules/PHY1027.html,Misc,
 IT Skills for Physicists,PHY1028 ,Phy,1,12,15,,,,,,,,,N/A,PHY1023,,,https://newton.ex.ac.uk/handbook/modules/PHY1028.html,"Coding, Maths",
 Electromagnetism 1,PHY2021,Phy,2,1,15,,N,N,Y,N,N,N,Y,PHY1026,N/A,Y,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2021.html,"Emag, Quantum, Condensed",
 Quantum Mechanics 1,PHY2022,Phy,2,1,15,,N,N,Y,N,N,N,Y,PHY1026,N/A,Y,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2022.html,"Emag, Quantum, Condensed",
