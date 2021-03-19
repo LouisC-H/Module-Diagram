@@ -22,6 +22,8 @@ class Map():
         #Find a way to let users set this themselves
         # self.chosen_departments = ['Bio']
         self.chosen_departments = ['NatSci', 'Phy', 'Bio','Maths']
+        self.years = ['1', '2', '3', '4']
+        self.chosen_years = [False, True, True, True]
 
         #Find dimensions of data matrix
         self.columns_dict = {}
@@ -46,17 +48,28 @@ class Map():
 
         #Beautify each department's columns with a background colour
         self.potential_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
-        self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6', '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
+        self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6',
+                            '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
         self.chosen_colours = []
 
         #Store data on inter-module links to be imported into the JS
         self.module_links_codes = []
         self.module_links_indices = []
 
+        self.set_relevant_years()
         self.find_relevant_modules()
         self.generate_table_matrix()
         self.concentrate_modules()
+        self.add_year_information()
 
+    def set_relevant_years(self):
+        '''
+        For any years set to "False", change that value in self.years to "False"
+        '''
+
+        for i in range(len(self.chosen_years)):
+            if not self.chosen_years[i]:
+                self.years[i] = "False"
 
     def find_relevant_modules(self):
         '''
@@ -65,15 +78,16 @@ class Map():
         '''
         for department in self.chosen_departments:
             for module in Module.objects.filter(department = department):
-                if module.department not in self.columns_dict:
-                    self.columns_dict[module.department] = [{}, self.num_depts]
-                    self.num_depts +=1
-                if module.category not in self.columns_dict[module.department][0]:
-                    self.columns_dict[module.department][0][module.category] = {}
-                if module.sub_category not in self.columns_dict[module.department][0][module.category]:
-                    self.columns_dict[module.department][0][module.category][module.sub_category] = self.num_columns
-                    self.num_columns +=1
-                self.populate_module_detail_lists(module)
+                if module.year in self.years:
+                    if module.department not in self.columns_dict:
+                        self.columns_dict[module.department] = [{}, self.num_depts]
+                        self.num_depts +=1
+                    if module.category not in self.columns_dict[module.department][0]:
+                        self.columns_dict[module.department][0][module.category] = {}
+                    if module.sub_category not in self.columns_dict[module.department][0][module.category]:
+                        self.columns_dict[module.department][0][module.category][module.sub_category] = self.num_columns
+                        self.num_columns +=1
+                    self.populate_module_detail_lists(module)
 
     def populate_module_detail_lists(self, module):
         '''
@@ -391,6 +405,24 @@ class Map():
             del names[0], terms[0], websites[0]
 
         self.group_modules(data_grouped, names, terms, websites)
+
+    def add_year_information(self):
+        '''
+        Add information about what year each row corresponds to
+        (if year is set to "NA"), it isn't displayed
+        '''
+
+        dept_number = 0
+        for department in self.table_data:
+            col_number = 0
+            for column in department[0]:
+                row_number = 0
+                for row in column:
+                    self.table_data[dept_number][0][col_number][row_number] = [row, self.years[row_number]]
+                    row_number += 1
+                col_number += 1
+            dept_number += 1
+
 
 
 class Module(models.Model):

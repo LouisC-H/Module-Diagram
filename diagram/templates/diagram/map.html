@@ -19,121 +19,112 @@
           <div class="div_table">
             <div class="first_dept">
               <div class="first_column">
-                <div class="first_cell">
-                  Y1
-                </div>
-                <div class="first_cell">
-                  Y2
-                </div>
-                <div class="first_cell">
-                  Y3
-                </div>
-                <div class="first_cell">
-                  Y4
-                </div>
+                {% for year in num_years%}
+                  {% if year != 'False' %}
+                    <div class="first_cell">
+                      Y{{year}}
+                    </div>
+                  {% endif %}
+                {% endfor %}
               </div>
             </div>
           {% for department in table_data %}
             <div class="department" style="{{department.1}}">
             {% for column in department.0 %}
               <div class="column">
-              {% for row in column %}
-                <div class="cell">
-                {% for wrapper in row %}
-                  <div class="wrapper">
-                    {% for module in wrapper %}
+                {% for row in column %}
+                  {% if row.1 != 'False' %}
+                    <div class="cell">
+                      {% for wrapper in row.0 %}
+                        <div class="wrapper">
+                          {% for module in wrapper %}
 
-                      {% if module.1 == 1 %}
+                            {% if module.1 == 1 %}
+                              <table class="module_T1">
+                                <tbody>
+                                  <tr>
+                                    <td class="module_name">{{module.0}}</td>
+                                  </tr>
+                                  <tr>
+                                    {% if module.2 %}
+                                    <td class="details_link"><a href="{{ module.2 }}">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                                    {% endif %}
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                        <table class="module_T1">
-                          <tbody>
-                            <tr>
-                              <td class="module_name">{{module.0}}</td>
-                            </tr>
-                            <tr>
-                              {% if module.2 %}
-                              <td class="details_link"><a href="{{ module.2 }}">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
-                              {% endif %}
-                            </tr>
-                          </tbody>
-                        </table>
+                            {% elif module.1 == 12 %}
+                              <table class="module_T1_2">
+                                <tbody>
+                                  <tr>
+                                    <td class="module_name">{{module.0}} </td>
+                                  </tr>
+                                  <tr>
+                                    {% if module.2 %}
+                                    <td class="details_link"><a href="{{ module.2 }}">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                                    {% endif %}
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                      {% elif module.1 == 12 %}
+                            {% elif module.1 == 123 %}
+                              <table class="module_T1_2_3">
+                                <tbody>
+                                  <tr>
+                                    <td class="module_name">{{module.0}} </td>
+                                  </tr>
+                                  <tr>
+                                    {% if module.2 %}
+                                    <td class="details_link"><a href="{{ module.2 }}">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                                    {% endif %}
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                        <table class="module_T1_2">
-                          <tbody>
-                            <tr>
-                              <td class="module_name">{{module.0}} </td>
-                            </tr>
-                            <tr>
-                              {% if module.2 %}
-                              <td class="details_link"><a href="{{ module.2 }}">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
-                              {% endif %}
-                            </tr>
-                          </tbody>
-                        </table>
+                            {% elif module.1 == 2 %}
+                              <table class="module_T2">
+                                <tbody>
+                                  <tr>
+                                    <td class="module_name">{{module.0}}</td>
+                                  </tr>
+                                  <tr>
+                                    {% if module.2 %}
+                                    <td class="details_link"><a href="{{ module.2 }}">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                                    {% endif %}
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                      {% elif module.1 == 123 %}
+                            {% elif module.1 == 3 %}
+                              <table class="module_T3">
+                                <tbody>
+                                  <tr class="module_name">
+                                    <td>{{module.0}}</td>
+                                  </tr>
+                                  <tr>
+                                    {% if module.2 %}
+                                    <td class="details_link"><a href="{{ module.2 }}">
+                                      <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
+                                    {% endif %}
+                                  </tr>
+                                </tbody>
+                              </table>
 
-                        <table class="module_T1_2_3">
-                          <tbody>
-                            <tr>
-                              <td class="module_name">{{module.0}} </td>
-                            </tr>
-                            <tr>
-                              {% if module.2 %}
-                              <td class="details_link"><a href="{{ module.2 }}">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
-                              {% endif %}
-                            </tr>
-                          </tbody>
-                        </table>
+                            {% elif module.1 == -1 %}
+                              <div class="Spacer">
+                              </div>
 
-                      {% elif module.1 == 2 %}
-
-                        <table class="module_T2">
-                          <tbody>
-                            <tr>
-                              <td class="module_name">{{module.0}}</td>
-                            </tr>
-                            <tr>
-                              {% if module.2 %}
-                              <td class="details_link"><a href="{{ module.2 }}">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
-                              {% endif %}
-                            </tr>
-                          </tbody>
-                        </table>
-
-                      {% elif module.1 == 3 %}
-
-                        <table class="module_T3">
-                          <tbody>
-                            <tr class="module_name">
-                              <td>{{module.0}}</td>
-                            </tr>
-                            <tr>
-                              {% if module.2 %}
-                              <td class="details_link"><a href="{{ module.2 }}">
-                                <i class="fa fa-info-circle" aria-hidden="true"></i> Details <a></td>
-                              {% endif %}
-                            </tr>
-                          </tbody>
-                        </table>
-
-                      {% elif module.1 == -1 %}
-
-                        <div class="Spacer">
+                            {% endif %}
+                          {% endfor %}
                         </div>
-
-                      {% endif %}
-                    {% endfor %}
-                  </div>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
                 {% endfor %}
-                </div>
-              {% endfor %}
               </div>
             {% endfor %}
             </div>
@@ -146,5 +137,5 @@
         </script>
     </main>
   </body>
-  
+
 </html>
