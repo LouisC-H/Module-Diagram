@@ -8,6 +8,7 @@ body{
 }
 
 td{
+  font: 14px Arial, sans-serif;
   background-color: rgb(255, 255, 255);
 }
 
@@ -34,7 +35,7 @@ td{
 
 .first_cell {
   display:flex;
-  height: 450px;
+  height: 300px;
   min-width: 30px;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -64,8 +65,8 @@ td{
 
 .cell {
   display:flex;
-  height: 450px;
-  min-width: 200px;
+  height: 300px;
+  min-width: 150px;
   border-top-style: solid;
   border-bottom-style: solid;
   border-width: 3px;
@@ -76,52 +77,52 @@ td{
 .wrapper {
   display:flex;
   height: 100%;
-  width: 200px;
+  width: 150px;
   flex-direction: column;
 }
 
 .module_T1{
   background-color: #CAC8C0;
-  width: 200px;
-  height: 150px;
-  border-spacing: 15px;
+  width: 150px;
+  height: 100px;
+  border-spacing: 10px;
   text-align: center;
 }
 
 .module_T1_2{
   background-color: #CAC8C0;
-  width: 200px;
-  height: 300px;
-  border-spacing: 15px;
+  width: 150px;
+  height: 200px;
+  border-spacing: 10px;
   text-align: center;
 }
 
 .module_T1_2_3{
   background-color: #CAC8C0;
-  width: 200px;
-  height: 450px;
-  border-spacing: 15px;
+  width: 150px;
+  height: 30px;
+  border-spacing: 10px;
   text-align: center;
 }
 
 .module_T2{
   background-color: #CAC8C0;
-  width: 200px;
-  height: 150px;
-  border-spacing: 15px;
+  width: 150px;
+  height: 100px;
+  border-spacing: 10px;
   text-align: center;
 }
 
 .module_T3{
   background-color: #CAC8C0;
-  width: 200px;
-  height: 150px;
-  border-spacing: 15px;
+  width: 150px;
+  height: 100px;
+  border-spacing: 10px;
   text-align: center;
 }
 
 .module_name{
-
+  font: 12px Arial, sans-serif;
 }
 
 .details_link{
@@ -129,6 +130,6 @@ td{
 }
 
 .spacer{
-  width: 200px;
-  height: 150px;
+  width: 150px;
+  height: 100px;
 }
