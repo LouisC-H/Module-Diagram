@@ -35,7 +35,7 @@ td{
 
 .first_cell {
   display:flex;
-  height: 300px;
+  height: 298px;
   min-width: 30px;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -51,7 +51,8 @@ td{
 .department{
   display: flex;
   flex-direction: row;
-  border: 3px black solid;
+  border-right: 3px black solid;
+  border-left: 3px black solid;
 }
 
 .column {
@@ -66,7 +67,7 @@ td{
 .cell {
   display:flex;
   height: 300px;
-  min-width: 150px;
+  min-width: 140px;
   border-top-style: solid;
   border-bottom-style: solid;
   border-width: 3px;
@@ -77,48 +78,35 @@ td{
 .wrapper {
   display:flex;
   height: 100%;
-  width: 150px;
+  width: 140px;
   flex-direction: column;
 }
 
-.module_T1{
+.module_box{
   background-color: #CAC8C0;
-  width: 150px;
-  height: 100px;
+  width: 140px;
   border-spacing: 10px;
   text-align: center;
+}
+
+.module_T1{
+  height: 100px;
 }
 
 .module_T1_2{
-  background-color: #CAC8C0;
-  width: 150px;
   height: 200px;
-  border-spacing: 10px;
-  text-align: center;
 }
 
 .module_T1_2_3{
-  background-color: #CAC8C0;
-  width: 150px;
-  height: 30px;
-  border-spacing: 10px;
-  text-align: center;
+  height: 300px;
 }
 
 .module_T2{
-  background-color: #CAC8C0;
-  width: 150px;
   height: 100px;
-  border-spacing: 10px;
-  text-align: center;
 }
 
 .module_T3{
-  background-color: #CAC8C0;
-  width: 150px;
   height: 100px;
-  border-spacing: 10px;
-  text-align: center;
 }
 
 .module_name{
@@ -126,10 +114,10 @@ td{
 }
 
 .details_link{
-  height: 25px;
+  height: 20px;
 }
 
 .spacer{
-  width: 150px;
+  width: 140px;
   height: 100px;
 }
