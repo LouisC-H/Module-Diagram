@@ -12,6 +12,15 @@ td{
   background-color: rgb(255, 255, 255);
 }
 
+.credits {
+  position: fixed;
+  right: 5px;
+  top: 10px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+}
+
 .div_table {
   display: flex;
   flex-direction: row;
@@ -88,6 +97,9 @@ td{
   border-spacing: 10px;
   text-align: center;
 }
+.module_box.selected{
+  background-color: #31cc56;
+  }
 
 .module_T1{
   height: 100px;
