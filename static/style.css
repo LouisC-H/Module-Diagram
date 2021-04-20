@@ -8,7 +8,17 @@ body{
 }
 
 td{
+  font: 14px Arial, sans-serif;
   background-color: rgb(255, 255, 255);
+}
+
+.credits {
+  position: fixed;
+  right: 5px;
+  top: 10px;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
 }
 
 .div_table {
@@ -34,7 +44,7 @@ td{
 
 .first_cell {
   display:flex;
-  height: 450px;
+  height: 298px;
   min-width: 30px;
   border-top-style: solid;
   border-bottom-style: solid;
@@ -50,7 +60,8 @@ td{
 .department{
   display: flex;
   flex-direction: row;
-  border: 3px black solid;
+  border-right: 3px black solid;
+  border-left: 3px black solid;
 }
 
 .column {
@@ -64,8 +75,8 @@ td{
 
 .cell {
   display:flex;
-  height: 450px;
-  min-width: 200px;
+  height: 300px;
+  min-width: 140px;
   border-top-style: solid;
   border-bottom-style: solid;
   border-width: 3px;
@@ -76,59 +87,49 @@ td{
 .wrapper {
   display:flex;
   height: 100%;
-  width: 200px;
+  width: 140px;
   flex-direction: column;
 }
 
-.module_T1{
+.module_box{
   background-color: #CAC8C0;
-  width: 200px;
-  height: 150px;
-  border-spacing: 15px;
+  width: 140px;
+  border-spacing: 10px;
   text-align: center;
+}
+.module_box.selected{
+  background-color: #31cc56;
+  }
+
+.module_T1{
+  height: 100px;
 }
 
 .module_T1_2{
-  background-color: #CAC8C0;
-  width: 200px;
-  height: 300px;
-  border-spacing: 15px;
-  text-align: center;
+  height: 200px;
 }
 
 .module_T1_2_3{
-  background-color: #CAC8C0;
-  width: 200px;
-  height: 450px;
-  border-spacing: 15px;
-  text-align: center;
+  height: 300px;
 }
 
 .module_T2{
-  background-color: #CAC8C0;
-  width: 200px;
-  height: 150px;
-  border-spacing: 15px;
-  text-align: center;
+  height: 100px;
 }
 
 .module_T3{
-  background-color: #CAC8C0;
-  width: 200px;
-  height: 150px;
-  border-spacing: 15px;
-  text-align: center;
+  height: 100px;
 }
 
 .module_name{
-
+  font: 12px Arial, sans-serif;
 }
 
 .details_link{
-  height: 25px;
+  height: 20px;
 }
 
 .spacer{
-  width: 200px;
-  height: 150px;
+  width: 140px;
+  height: 100px;
 }
