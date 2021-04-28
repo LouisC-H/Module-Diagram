@@ -52,6 +52,7 @@ class Map():
 
         #Beautify each department's columns with a background colour
         self.potential_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
+        self.departments_in_full = ['CSM', 'Computing', 'Engineering', 'Mathematics', 'Natural Science', 'Physics', 'Biosciences', 'Geography', 'Other']
         self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6',
                             '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
         self.chosen_colours = []
@@ -198,18 +199,14 @@ class Map():
             total_column_number += dept_col_number
 
             #...then append to larger list
-            dept_colour = self.dept_colour(department)
-            self.table_data.append([dept_matrix, f'background-color: {dept_colour}'])
+            dept_index = self.potential_departments.index(department)
+            dept_colour = self.dept_colours[dept_index]
+            dept_full = self.departments_in_full[dept_index]
+            self.table_data.append([dept_matrix, f'background-color: {dept_colour}', dept_full])
 
         #Once the matrix of nested tables has been initialised, populate it with data
         for module_index in range(len(self.relevant_modules_ids)):
             self.add_module_data(module_index)
-
-    def dept_colour(self, department):
-        '''
-        returns the department's columns' background colour
-        '''
-        return self.dept_colours[self.potential_departments.index(department)]
 
     def add_module_data(self, index):
         '''

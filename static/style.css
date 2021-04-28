@@ -17,7 +17,7 @@ td{
   right: 5px;
   top: 10px;
   z-index: 1;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   padding: 5px 10px;
 }
 
@@ -26,20 +26,11 @@ td{
   flex-direction: row;
 }
 
-.first_dept {
-  display: flex;
-  flex-direction: row;
-  border: 3px black solid;
-  background-color: black;
-}
-
-.first_column {
+.years_column {
   display: flex;
   flex-direction: column;
-  border-left-style: solid;
-  border-right-style: solid;
-  border-width: 1px;
-  border-color: black;
+  border: 3px black solid;
+  background-color: black;
 }
 
 .first_cell {
@@ -59,6 +50,18 @@ td{
 
 .department{
   display: flex;
+  flex-direction: column;
+}
+
+.dept_name{
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.dept_modules{
+  display: flex;
   flex-direction: row;
   border-right: 3px black solid;
   border-left: 3px black solid;
@@ -77,7 +80,6 @@ td{
   display:flex;
   height: 300px;
   min-width: 140px;
-  border-top-style: solid;
   border-bottom-style: solid;
   border-width: 3px;
   border-color: black;
@@ -97,6 +99,7 @@ td{
   border-spacing: 10px;
   text-align: center;
 }
+
 .module_box.selected{
   background-color: #31cc56;
   }
@@ -123,6 +126,7 @@ td{
 
 .module_name{
   font: 12px Arial, sans-serif;
+  cursor: pointer;
 }
 
 .details_link{
