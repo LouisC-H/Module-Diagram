@@ -41,9 +41,7 @@ class Command(BaseCommand):
             module.credits = row['Credits']
             module.department = row['Department']
             module.category = row['Category']
-            module.sub_category = row['Sub-category']
             module.website = row['Module Descriptor']
-
             module.pre_req = row['Pre Req']
             module.co_req = row['Co Req']
 
@@ -63,6 +61,9 @@ class Command(BaseCommand):
 
             module.save()
 
+            '''
+            old example stuff
+            '''
             #raw_vaccination_names = row['vaccinations']
             #vaccination_names = [name for name in raw_vaccination_names.split('| ') if name]
             #for vac_name in vaccination_names:
