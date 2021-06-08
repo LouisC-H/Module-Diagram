@@ -162,6 +162,7 @@ class Map():
         #For every other module in the modules_ungrouped list, try adding it to
         # the grouping, then check if any two grouped modules' terms overlap.
         for module in modules_ungrouped:
+
             sum_module_height = np.add(sum_module_height, module.height)
 
             if 2 in sum_module_height :
@@ -170,6 +171,8 @@ class Map():
             else:
                 compatible_modules.append(module)
                 modules_ungrouped.remove(module)
+
+
 
         grouped_sublist.append(self.order_modules(compatible_modules))
 
@@ -188,6 +191,8 @@ class Map():
 
         #Check for modules that run in term 1
         for module in compatible_modules:
+            if module.term_identifier == 23:
+                print("success")
             if module.height[0] == 1:
                 ordered_modules.append(module.module_information())
                 compatible_modules.remove(module)
@@ -206,6 +211,9 @@ class Map():
                 ordered_modules.append(module.module_information())
                 compatible_modules.remove(module)
                 term_2 = True
+                # Check if they also run across in term 3
+                if module.height[2] == 1:
+                    term_3 = True
 
         #Add a spacer if needed
         if term_2 == False:
@@ -278,7 +286,12 @@ class DiagBoxes:
             self.height = [0, 0, 1]
         elif self.term_identifier == 12:
             self.height = [1, 1, 0]
+        elif self.term_identifier == 23:
+            self.height = [0, 1, 1]
+        elif self.term_identifier == 123:
+            self.height = [1, 1, 1]
         else:
+            print(f"Warning, module {self.database.name} has height {self.term_identifier}")
             self.height = [1, 1, 1]
 
     def module_information(self):
@@ -296,7 +309,7 @@ class Module(models.Model):
         return self.code
 
     uni_years = [('1','1'),('2','2'),('3','3'),('4','4'),('na','N/A')]
-    uni_terms = [('1','1'),('2','2'),('3','3'),('12','1 and 2'),('123','1, 2 and 3'),('Other','Other')]
+    uni_terms = [('1','1'),('2','2'),('3','3'),('12','1 and 2'),('23','2 and 3'),('123','1, 2 and 3'),('Other','Other')]
     departments = [('CSM', 'Camborne School of Mines'), ('Comp', 'Computing'),
                     ('Eng', 'Engineering'), ('Maths', 'Mathematics'),
                     ('NatSci', 'Natural Sciences'), ('Phy', 'Physics and Astronomy'),
