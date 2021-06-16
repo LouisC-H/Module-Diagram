@@ -19,6 +19,37 @@ td{
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.9);
   padding: 5px 10px;
+  max-width: 310;
+  text-align: center;
+}
+
+.deniedDiv{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.deniedDiv p{
+  color: red;
+  margin: 0;
+}
+.deniedDiv span{
+  font-weight: bold;
+}
+
+.warningDiv p{
+  color: #e66f00;
+  margin: 0;
+}
+.warningDiv span{
+  font-weight: bold;
+}
+
+.weirdDiv p{
+  color: #a22a7a;
+  margin: 0;
+}
+.weirdDiv span{
+  font-weight: bold;
 }
 
 .div_table {
@@ -120,6 +151,10 @@ td{
   height: 100px;
 }
 
+.module_T2_3{
+  height: 200px;
+}
+
 .module_T3{
   height: 100px;
 }
@@ -127,6 +162,18 @@ td{
 .module_name{
   font: 12px Arial, sans-serif;
   cursor: pointer;
+}
+
+.warning td{
+  background-color: #eb9947;
+}
+
+.denied td{
+  background-color: #ff8080;
+}
+
+.weird td{
+  background-color: #e085c2;
 }
 
 .details_link{
