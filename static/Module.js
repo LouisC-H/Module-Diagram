@@ -53,10 +53,6 @@ class Module{
     // Add an event listerner to allow user to select modules
     this.moduleBox.addEventListener("click", (event) => {
       this.selectModule(this.year, this.credits, this.moduleBox, this.creditsDiv, this.dController);
-      // this.updatePreRequisites(this.inversePreReqs, moduleList, this.moduleBox.classList, this.code);
-      // // Check to see if the module is missing a prerequisite
-      // this.testForMissingPreReq();
-
     });
 
   }

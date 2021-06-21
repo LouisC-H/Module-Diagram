@@ -9,9 +9,10 @@ class Map():
     modules from the database into a module map.
     '''
 
-    def __init__(self):
+    def __init__(self, user_options):
 
         super().__init__()
+        self.user_options = user_options
         self.init_map()
 
     def init_map(self):
@@ -21,14 +22,29 @@ class Map():
 
         #Store some default data
         self.potential_departments = ['CSM', 'Comp', 'Eng', 'Maths', 'NatSci', 'Phy', 'Bio', 'Geo', 'Other']
-        self.departments_in_full = ['CSM', 'Computing', 'Engineering', 'Mathematics', 'Natural Science', 'Physics', 'Biosciences', 'Geography', 'Other']
+        self.departments_in_full = ['CSM', 'Computing', 'Engineering', 'Mathematics', 'Natural Science', 'Physics and Astronomy', 'Biosciences', 'Geography', 'Other']
         self.dept_colours = ['#b39559', '#ffb380', '#e67373', '#73e6e6',
                             '#cf8cde', '#99bbff', '#95e67c', '#e6e673', '#ffffff']
         self.years = ['1', '2', '3', '4']
 
-        #Find a way to let users set this themselves
         self.chosen_departments = ['NatSci', 'Phy', 'Bio','Maths']
         self.chosen_years = [True, True, True, True]
+
+        #Unless the user wants all depts and years to be present, read the
+        # user_options string and for each "0", cross that dept/year off the list
+        # (set it to False).
+        if self.user_options != "All":
+            chosen_dept_number = len(self.chosen_departments)
+            iteration = 0
+            for digit in self.user_options:
+                if 0 <= iteration and iteration < chosen_dept_number:
+                    if digit == "0":
+                        self.chosen_departments[iteration] = False
+                elif chosen_dept_number <= iteration  and iteration < chosen_dept_number + len(self.chosen_years):
+                    if digit == "0":
+                        self.chosen_years[iteration - chosen_dept_number] = False
+
+                iteration += 1
 
         #Prepare to store the dimensions of data matrix
         self.columns_dict = {}
@@ -191,8 +207,6 @@ class Map():
 
         #Check for modules that run in term 1
         for module in compatible_modules:
-            if module.term_identifier == 23:
-                print("success")
             if module.height[0] == 1:
                 ordered_modules.append(module.module_information())
                 compatible_modules.remove(module)

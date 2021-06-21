@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'options/style.css' %}">
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>UoE module diagram</title>
+  </head>
+  <body>
+    <div class="options_wrapper">
+      <form class="depts_selector">
+        <h4>Select departments of interest:</h4>
+        <input type="checkbox" id="dept1" name="dept1" value="NatSci" >
+        <label for="dept1"> Natural Sciences </label><br>
+        <input type="checkbox" id="dept2" name="dept2" value="Phys" >
+        <label for="dept2"> Physics and Astronomy </label><br>
+        <input type="checkbox" id="dept3" name="dept3" value="Bio" >
+        <label for="dept3"> Biosciences </label><br>
+        <input type="checkbox" id="dept4" name="dept4" value="Maths" >
+        <label for="dept4"> Mathematics </label><br>
+      </form>
+      <form class="years_selector">
+        <h4>Select years of interest:</h4>
+        <input type="checkbox" id="year1" name="year1" value="1" checked>
+        <label for="year1"> Year 1 </label><br>
+        <input type="checkbox" id="year2" name="year2" value="2" checked>
+        <label for="year2"> Year 2 </label><br>
+        <input type="checkbox" id="year3" name="year3" value="3" checked>
+        <label for="year3"> Year 3 </label><br>
+        <input type="checkbox" id="year4" name="year4" value="4" checked>
+        <label for="year4"> Year 4 </label><br>
+      </form>
+      <button type="button"> Plan your module choices </button>
+    </div>
+  </body>
+  <script  type="text/javascript" src="{% static 'options/options.js' %}"> </script>
+</html>

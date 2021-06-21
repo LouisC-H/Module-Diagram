@@ -52,6 +52,14 @@ td{
   font-weight: bold;
 }
 
+.noYearDiv p{
+  color: #0362fc;
+  margin: 0;
+}
+.noYearDiv span{
+  font-weight: bold;
+}
+
 .div_table {
   display: flex;
   flex-direction: row;
