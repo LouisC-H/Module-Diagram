@@ -43,13 +43,3 @@ class Command(BaseCommand):
             module.co_req = row['Co Req']
 
             module.save()
-
-            '''
-            old example stuff
-            '''
-            #raw_vaccination_names = row['vaccinations']
-            #vaccination_names = [name for name in raw_vaccination_names.split('| ') if name]
-            #for vac_name in vaccination_names:
-            #    vac = Vaccine.objects.get(name=vac_name)
-            #    pet.vaccinations.add(vac)
-            #pet.save()

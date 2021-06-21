@@ -14,6 +14,7 @@ class DiagramController{
     this.selectedModuleCodes = [];
 
     this.initModuleObjects()
+    this.testForMissingYears()
   }
 
   initModuleObjects() {
@@ -39,9 +40,6 @@ class DiagramController{
      * @param {list} moduleClassList - The list of classes belonging to the
      * model's corresponding HTML object
      */
-
-     // console.log(moduleObject.inversePreReqs);
-
 
     if (moduleClassList.contains("selected")){
       // if module was just selected, add its code to the list of selected modules
@@ -174,8 +172,6 @@ class DiagramController{
           missingModulesSpan.innerHTML += module.querySelector(".module_name").innerText
           missingModulesSpan.innerHTML += "</br>"
         }
-
-      console.log(document.querySelector(".deniedDiv"));
     }
   }
 
@@ -205,8 +201,6 @@ class DiagramController{
           missingModulesSpan.innerHTML += module.querySelector(".module_name").innerText
           missingModulesSpan.innerHTML += "</br>"
         }
-
-      console.log(document.querySelector(".warningDiv"));
     }
   }
 
@@ -235,8 +229,35 @@ class DiagramController{
           missingModulesSpan.innerHTML += module.querySelector(".module_name").innerText
           missingModulesSpan.innerHTML += "</br>"
         }
+    }
+  }
 
-      console.log(document.querySelector(".weirdDiv"));
+  testForMissingYears(){
+
+    const creditsDiv = document.querySelector(".credits");
+
+    let missingYear = false
+
+    if (creditsDiv.querySelector(".year1")){} else{
+      missingYear = true
+    }
+
+    if (creditsDiv.querySelector(".year2")){} else{
+      missingYear = true
+    }
+
+    if (creditsDiv.querySelector(".year3")){} else{
+      missingYear = true
+    }
+
+    if (missingYear){
+      const warningMessage = `<p>Warning: Not all years selcted. Pre-requisites calculate assuming that you have all required modules from missing years</p>`;
+
+      const noYearDiv = document.createElement("div");
+      noYearDiv.classList.add("noYearDiv");
+      noYearDiv.innerHTML = warningMessage;
+
+      creditsDiv.append(noYearDiv);
     }
   }
 }
