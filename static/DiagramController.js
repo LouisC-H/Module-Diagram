@@ -15,6 +15,8 @@ class DiagramController{
 
     this.initModuleObjects()
     this.testForMissingYears()
+    this.testForMissingPreReq()
+    this.testForMissingCoReq()
   }
 
   initModuleObjects() {
@@ -157,7 +159,7 @@ class DiagramController{
     const selectedDeniedModules = document.querySelectorAll(".selected.denied")
 
     if (selectedDeniedModules.length != 0){
-      const warningMessage = `<p>You may not have all of the pre-requisites listed for the selected modules :</p>
+      const warningMessage = `<p>You may not have all of the <strong> pre-requisites </strong> listed for the selected modules :</p>
       <p><span></span></p>
       <p>Please contact the relevant module leaders if you would like to choose these options</p>`;
 
@@ -172,6 +174,14 @@ class DiagramController{
           missingModulesSpan.innerHTML += module.querySelector(".module_name").innerText
           missingModulesSpan.innerHTML += "</br>"
         }
+    } else {
+      const warningMessage = `<p>No missing <strong> pre-requisites </strong></p>`;
+
+      const warningDiv = document.createElement("div");
+      warningDiv.classList.add("deniedDiv");
+      warningDiv.innerHTML = warningMessage;
+
+      creditsDiv.append(warningDiv);
     }
   }
 
@@ -186,7 +196,7 @@ class DiagramController{
     const selectedDeniedModules = document.querySelectorAll(".selected.warning")
 
     if (selectedDeniedModules.length != 0){
-      const warningMessage = `<p>You may not have all of the co-requisites listed for the selected modules :</p>
+      const warningMessage = `<p>You may not have all of the <strong> co-requisites </strong> listed for the selected modules :</p>
       <p><span></span></p>
       <p>Please contact the relevant module leaders if you would like to choose these options</p>`;
 
@@ -201,6 +211,14 @@ class DiagramController{
           missingModulesSpan.innerHTML += module.querySelector(".module_name").innerText
           missingModulesSpan.innerHTML += "</br>"
         }
+    } else {
+      const warningMessage = `<p>No missing <strong> co-requisites </strong></p>`;
+
+      const warningDiv = document.createElement("div");
+      warningDiv.classList.add("warningDiv");
+      warningDiv.innerHTML = warningMessage;
+
+      creditsDiv.append(warningDiv);
     }
   }
 
