@@ -1,183 +1,207 @@
 Core name,Code,Department,Year,Term,Credits,Pre Req,Co Req,Module Descriptor,Category
-Animals,BIO1331,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1331&ay=2020/1,Animals and Marine
-Biochemistry,BIO1332,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1332&ay=2020/1,Chemistry
-Fundamental Principles for Bioscientists,BIO1333,Bio,1,123,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1333&ay=2020/1,Misc
-Genetics,BIO1334,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1334&ay=2020/1,Cell
-Ecology,BIO1336,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1336&ay=2020/1,Ecology and plants
-Microbiology,BIO1337,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1337&ay=2020/1,Cell
-Plants,BIO1338,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1338&ay=2020/1,Ecology and plants
-Cells,BIO1339,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1339&ay=2020/1,Cell
-Fundamentals of Inorganic Chemistry,BIO1340,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1340&ay=2020/1,Chemistry
-Structure and Reactivity of Organic Compounds I,BIO1345,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1345&ay=2020/1,Chemistry
-Biophysical Chemistry,BIO1346,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1346&ay=2020/1,Chemistry
-Forensic Science,BIO2066,Bio,2,2,15,BIO1333,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2066&ay=2020/1,Misc
-Forensic Science,BIO2068,Bio,2,12,30,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2068&ay=2020/1,Misc
-Research Skills and Bioethics,BIO2071,Bio,2,12,15,BIO1333,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2071&ay=2020/1,Misc
-Marine Biology,BIO2074,Bio,2,2,15,BIO1331 and BIO1336,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2074&ay=2020/1,Animals and Marine
-Ecology and the Environment,BIO2076,Bio,2,1,15,BIO1336 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2076&ay=2020/1,Ecology and plants
-Medical and General Microbiology,BIO2078,Bio,2,1,15,BIO1337,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2078&ay=2020/1,Cell
-Coral Reef Field Course,BIO2081,Bio,2,123,15,BIO1336,BIO2074,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2081&ay=2020/1,Animals and Marine
-Animal Ecophysiology,BIO2082,Bio,2,1,15,BIO1331,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2082&ay=2020/1,Animals and Marine
-Structure and Reactivity of Organic Compounds,BIO2085,Bio,2,1,15,BIO1345 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2085&ay=2020/1,Chemistry
-Metabolism,BIO2086,Bio,2,2,15,BIO1332 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2086&ay=2020/1,Cell
-Advanced Cell Biology,BIO2088,Bio,2,1,15,BIO1339 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2088&ay=2020/1,Cell
-Molecular Biology of the Gene,BIO2089,Bio,2,1,15,BIO1334 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2089&ay=2020/1,Cell
-Analytical Techniques in Biochemistry,BIO2090,Bio,2,1,15,BIO1332 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2090&ay=2020/1,Chemistry
-Bioinorganic Chemistry,BIO2091,Bio,2,2,15,BIO1332 and BIO1340 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2091&ay=2020/1,Chemistry
-Genomics and Introductory Bioinformatics,BIO2092,Bio,2,2,15,BIO1334 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2092&ay=2020/1,Cell
-Modern Theories of Evolution,BIO2093,Bio,2,2,15,BIO1334 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2093&ay=2020/1,Ecology and plants
-Molecular Microbiology,BIO2094,Bio,2,2,15,BIO1337 or BIO1342,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2094&ay=2020/1,Cell
-Pratical Skills in Field Ecology,BIO2096,Bio,2,3,15,BIO1336,BIO2076,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2096&ay=2020/1,Ecology and plants
-Molecular Plant Science,BIO2099,Bio,2,2,15,BIO1334 and BIO1339,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2099&ay=2020/1,Ecology and plants
-Ecology of Environmental Change,BIO3037,Bio,3,2,15,BIO1336,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3037&ay=2020/1,Ecology and plants
-Pharmacology and Medicinal Chemistry,BIO3041,Bio,3,2,15,BIO1332,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3041&ay=2020/1,Chemistry
-Frontiers in Plant Biology,BIO3046,Bio,3,1,15,BIO2099,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3046&ay=2020/1,Ecology and plants
-Ecotoxicology,BIO3067,Bio,3,2,15,BIO1331,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3067&ay=2020/1,Misc
-Specialist Topics in Chemical Sciences,BIO3073,Bio,3,2,15,Warning,Warning,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3073&ay=2020/1,Chemistry
-Frontiers in Molecular Cell Biology,BIO3077,Bio,3,2,15,BIO2088 or BIO2098,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3077&ay=2020/1,Cell
-Cellular Basis of Immunity,BIO3078,Bio,3,1,15,BIO2078 or BIO2088 or BIO2089,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3078&ay=2020/1,Cell
-Molecular Basis of Infection,BIO3079,Bio,3,1,15,BIO2078 or BIO2094,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3079&ay=2020/1,Cell
-Science Communication,BIO3082,Bio,3,2,15,BIO2071 or NSC2001,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3082&ay=2020/1,Misc
-Current Issues in Marine Biology,BIO3083,Bio,3,1,15,BIO2074,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3083&ay=2020/1,Animals and Marine
-Horizons of Biochemical Research,BIO3085,Bio,3,1,15,BIO2090 or BIO2086,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3085&ay=2020/1,Chemistry
-Cell Biology of Disease,BIO3086,Bio,3,1,15,BIO2088,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3086&ay=2020/1,Cell
-Organic Synthesis and Drug Design,BIO3089,Bio,3,1,15,BIO2085,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3089&ay=2020/1,Chemistry
-Secondary Metabolites,BIO3090,Bio,3,2,15,BIO2085,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3090&ay=2020/1,Cell
-Animal Developmental Biology,BIO3091,Bio,3,1,15,BIO1331,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3091&ay=2020/1,Animals and Marine
-Bioinformatics,BIO3092,Bio,3,2,15,BIO2092 or BIO2093 or BIO2087,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3092&ay=2020/1,Misc
-Energy Metabolism,BIO3093,Bio,3,2,15,BIO1332,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3093&ay=2020/1,Cell
-Biosciences Research Project,BIO3096,Bio,3,123,45,BIO2071,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3096&ay=2020/1,Misc
-Living in a Microbial World,BIO3097,Bio,3,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3097&ay=2020/1,Cell
-Biology of Marine Vertebrates,BIO3098,Bio,3,1,15,BIO1331 and BIO2082 or BIO2074,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3098&ay=2020/1,Animals and Marine
-Professional Skills,BIOM509,Bio,4,12,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM509&ay=2020/1,Misc
-Secondary Metabolites,BIOM514,Bio,4,2,15,BIO2085 or NSC2001,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM514&ay=2020/1,Cell
-Cellular Basis of Immunity,BIOM515,Bio,4,1,15,BIO2089 and BIO2088 or BIO2087,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM515&ay=2020/1,Cell
-Bioinformatics,BIOM516,Bio,4,2,15,BIO2092 or BIO2093 or BIO2087,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM516&ay=2020/1,Misc
-Energy Metabolism,BIOM517,Bio,4,2,15,NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM517&ay=2020/1,Cell
-Research Project,BIOM518,Bio,4,123,75,,BIOM527,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM518&ay=2020/1,Misc
-Molecular Basis of Infection,BIOM525,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM525&ay=2020/1,Cell
-Research Grant Proposal,BIOM527,Bio,4,1,15,,BIOM518,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM527&ay=2020/1,Misc
-Advanced topics in biological sciences,BIOM528,Bio,4,12,15,Warning,Warning,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM528&ay=2020/1,Misc
-Medical Mycology,BIOM534,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM534&ay=2020/1,Cell
-Sustainable Land Use in Grassland Agriculture,BIOM562,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM562&ay=2020/1,Ecology and plants
-Crop Security,BIOM563,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM563&ay=2020/1,Ecology and plants
-Application of Genomics in Infectious Disease,BIOM567,Bio,4,3,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM567&ay=2020/1,Cell
-Blue Planet,BIOM568,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM568&ay=2020/1,Animals and Marine
-Mathematical Structures,MTH1001,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH1001,Pure
-Mathematical Methods,MTH1002,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH1002,Calculus
-Mathematical Modelling,MTH1003,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH1003,Modelling
-"Probability, Statistics and Data",MTH1004,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH1004,Probability and Statistics
-Diffrential Equations,MTH2003,Maths,2,1,15,MTH1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2003,Calculus
-Vector Calculus and Applications,MTH2004,Maths,2,2,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2004,Calculus
-Modelling: Theory and Practice,MTH2005,Maths,2,12,30,MTH1002 and MTH1003,MTH2003,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2005,Modelling
-Statistical Modelling and Inference,MTH2006,Maths,2,12,30,MTH1004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2006,Probability and Statistics
-Real Analysis,MTH2008,Maths,2,1,15,MTH1001 and MTH1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2008,Analysis
-Complex Analysis,MTH2009,Maths,2,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2009,Analysis
-"Groups, Rings and Fields",MTH2010,Maths,2,1,15,MTH1001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2010,Pure
-Linear Algebra,MTH2011,Maths,2,2,15,MTH1001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH2011,Pure
-Theory of Weather and Climate,MTH3001,Maths,3,2,15,MTH3007,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3001,Calculus
-Number Theory,MTH3004,Maths,3,1,15,MTH2002 and MTH2010,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3004,Pure
-Mathetmatical Biology and Ecology,MTH3006,Maths,3,1,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3006,Calculus
-Fluid Dynamics,MTH3007,Maths,3,1,15,MTH2004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3007,Calculus
-Partial Diffrential Equations,MTH3008,Maths,3,2,15,MTH2004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3008,Calculus
-Nonlinear Systems and Control,MTH3011,Maths,3,2,15,MTH2003 and MTH2005,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3011 ,Modelling
-Advanced Statistical Modelling,MTH3012,Maths,3,2,15,MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3012,Probability and Statistics
-Mathematics History and Culture,MTH3019,Maths,3,1,15,MTH1001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3019,Misc
-Combinatorics,MTH3021,Maths,3,2,15,MTH2002 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3021,Pure
-"Graphs, Networks and Algorithms",MTH3022,Maths,3,2,15,MTH2001 and MTH2008 and MTH2011 and MTH2002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3022,Pure
-Stochastic Processes,MTH3024,Maths,3,2,15,MTH1004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3024,Probability and Statistics
-Cryptography,MTH3026,Maths,3,2,15,MTH3004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3026,Pure
-Statistical Inference: Theory and Practice,MTH3028,Maths,3,2,15,MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3028,Probability and Statistics
-Mathematics of Climate Change,MTH3030,Maths,3,1,15,MTH1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3030,Calculus
-Applications of Geometry and Topology,MTH3032,Maths,3,2,15,MTH1001 and MTH2004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3032,Calculus
-Galois Theory,MTH3038,Maths,3,1,15,MTH2002 and MTH2010 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3038,Pure
-Computational Nonlinear Dynamics,MTH3039,Maths,3,1,15,MTH1003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3039,Modelling
-Topology and Metric Spaces,MTH3040,Maths,3,2,15,MTH2001 and MTH2008,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3040,Analysis
-"Bayesian Statistics, Philosophy and Practice",MTH3041,Maths,3,1,15,MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3041,Probability and Statistics
-Integral Equations,MTH3042,Maths,3,2,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTH3042,Calculus
-Functional Analysis,MTHM001,Maths,4,1,15,ECM3740 and ECM3703,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM001,Analysis
-Methods for Stochastics and Finance,MTHM002,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM002,Analysis
-Fractal Geometry,MTHM004,Maths,4,2,15,MTH2001 and MTH2008,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM004,Analysis
-Mathematical Theory of Option Pricing,MTHM006,Maths,4,2,15,MTHM002 and MTH3024,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM006,Probability and Statistics
-Computational Modelling,MTHM008,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM008,Modelling
-Advanced Topics in Mathematical and Comp �,MTHM009,Maths,4,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM009,Calculus
-Representation Theory of Finite Groups,MTHM010,Maths,4,1,15,MTH2002 and MTH2010 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM010,Pure
-Advanced Topics in Statistics,MTHM017,Maths,4,2,15,MTHM501 and MTHM502,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM017,Probability and Statistics
-Dynamical Systems and Chaos,MTHM018,Maths,4,1,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM018,Calculus
-Fluid Dynamics of Atmospheres and Oceans,MTHM019,Maths,4,1,15,MTH3001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM019,Calculus
-Modelling the Weather and Climate,MTHM023,Maths,4,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM023,Calculus
-Algebraic Curves,MTHM029,Maths,4,2,15,MTH2002 and MTH2010 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM029,Pure
-"Waves, Instabilities and Turbulence",MTHM030,Maths,4,2,15,MTH3007,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM030,Calculus
-Magnetic Fields and Fluid Flows ,MTHM031,Maths,4,1,15,MTH3007,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM031,Calculus
-Statistical Modelling in Space and Time,MTHM033,Maths,4,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM033,Probability and Statistics
-Analytical Number Theory,MTHM041,Maths,4,1,15,MTH2001 and MTH2009,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM041,Analysis
-Space Weather and Plasmas,MTHM045,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM045,Calculus
-Ergodic Theory,MTHM048,Maths,4,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM048,Probability and Statistics
-Working with Data,MTHM501 ,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM501,Probability and Statistics
-Introduction to Data Science and Statistical Modelling,MTHM502 ,Maths,4,12,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2020/index.php/?moduleCode=MTHM502,Probability and Statistics
-Frontiers in Science 1,NSC1005,NatSci,1,12,15,,NSC1002 and NSC1003 and NSC1004 ,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1005&ay=2020/1,Core
-Mathematics and Computing: Integrative Tools for Natural Sciences ,NSC1002,NatSci,1,12,30,,NSC1003 and NSC1004 and NSC1005,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1002&ay=2020/1,Coding
-Foundations in Natural Science,NSC1003,NatSci,1,12,60,,NSC1002 and NSC1004 and NSC1005,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1003&ay=2020/1,Science
-Experimental Science,NSC1004,NatSci,1,12,15,,NSC1002 and NSC1003 and NSC1005,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC1004&ay=2020/1,Core
-Frontiers in Science 2,NSC2001,NatSci,2,12,30,NSC1002 and NSC1004 and NSC1005,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC2001&ay=2020/1,Core
-Physical Chemistry,NSC2002,NatSci,2,2,15,NSC1003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC2002&ay=2020/1,Science
-Introduction to Numerics and Simulation for Scientists,NSC2003,NatSci,2,1,15,NSC1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC2003&ay=2020/1,Coding
-BSC Research Project,NSC3001,NatSci,3,2,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC3001&ay=2020/1,Core
-Msci Research Project 1,NSC3002,NatSci,3,2,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC3002&ay=2020/1,Core
-Group Project,NSC3003,NatSci,3,1,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC3003&ay=2020/1,Core
+Animals,BIO1331,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1331&ay=2021/2,Animals and Marine
+Biochemistry,BIO1332,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1332&ay=2021/2,Chemistry
+Fundamental Principles for Bioscientists,BIO1333,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1333&ay=2021/2,Misc
+Genetics,BIO1334,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1334&ay=2021/2,Cell
+Ecology,BIO1336,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1336&ay=2021/2,Ecology and plants
+Microbiology,BIO1337,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1337&ay=2021/2,Cell
+Plants,BIO1338,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1338&ay=2021/2,Ecology and plants
+Cells,BIO1339,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1339&ay=2021/2,Cell
+Fundamentals of Inorganic Chemistry,BIO1340,Bio,1,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1340&ay=2021/2,Chemistry
+Structure and Reactivity of Organic Compounds I,BIO1345,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1345&ay=2021/2,Chemistry
+Biophysical Chemistry,BIO1346,Bio,1,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO1346&ay=2021/2,Chemistry
+Forensic Science,BIO2066,Bio,2,2,15,BIO1333,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2066&ay=2021/2,Misc
+Forensic Science,BIO2068,Bio,2,12,30,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2068&ay=2021/2,Misc
+Research Skills and Bioethics,BIO2071,Bio,2,12,15,BIO1333,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2071&ay=2021/2,Misc
+Marine Biology,BIO2074,Bio,2,2,15,BIO1331 and BIO1336,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2074&ay=2021/2,Animals and Marine
+Ecology and the Environment,BIO2076,Bio,2,1,15,BIO1336 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2076&ay=2021/2,Ecology and plants
+Medical and General Microbiology,BIO2078,Bio,2,1,15,BIO1337,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2078&ay=2021/2,Cell
+Coral Reef Field Course,BIO2081,Bio,2,123,15,BIO1336,BIO2074,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2081&ay=2021/2,Animals and Marine
+Animal Ecophysiology,BIO2082,Bio,2,1,15,BIO1331,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2082&ay=2021/2,Animals and Marine
+Structure and Reactivity of Organic Compounds II,BIO2085,Bio,2,1,15,BIO1345 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2085&ay=2021/2,Chemistry
+Metabolism,BIO2086,Bio,2,2,15,BIO1332 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2086&ay=2021/2,Cell
+Advanced Cell Biology,BIO2088,Bio,2,1,15,BIO1339 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2088&ay=2021/2,Cell
+Molecular Biology of the Gene,BIO2089,Bio,2,1,15,BIO1334 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2089&ay=2021/2,Cell
+Analytical Techniques in Biochemistry,BIO2090,Bio,2,1,15,BIO1332 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2090&ay=2021/2,Chemistry
+Bioinorganic Chemistry,BIO2091,Bio,2,2,15,BIO1332 and BIO1340 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2091&ay=2021/2,Chemistry
+Genomics and Introductory Bioinformatics,BIO2092,Bio,2,2,15,BIO1334 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2092&ay=2021/2,Cell
+Modern Theories of Evolution,BIO2093,Bio,2,2,15,BIO1334 or NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2093&ay=2021/2,Ecology and plants
+Molecular Microbiology,BIO2094,Bio,2,2,15,BIO1337,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2094&ay=2021/2,Cell
+Pratical Skills in Field Ecology,BIO2096,Bio,2,3,15,BIO1336,BIO2076,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2096&ay=2021/2,Ecology and plants
+Molecular Plant Science,BIO2099,Bio,2,2,15,BIO1334 and BIO1339,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO2099&ay=2021/2,Ecology and plants
+Ecology of Environmental Change,BIO3037,Bio,3,2,15,BIO1336,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3037&ay=2021/2,Ecology and plants
+Pharmacology and Medicinal Chemistry,BIO3041,Bio,3,2,15,BIO1332,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3041&ay=2021/2,Chemistry
+Frontiers in Plant Biology,BIO3046,Bio,3,1,15,BIO2099,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3046&ay=2021/2,Ecology and plants
+Advanced Applications of Physiology,BIO3047,Bio,3,2,15,BIO2082,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3047&ay=2021/2,Animals and Marine
+Ecotoxicology,BIO3067,Bio,3,2,15,BIO1331,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3067&ay=2021/2,Misc
+Specialist Topics in Chemical Sciences,BIO3073,Bio,3,2,15,Warning,Warning,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3073&ay=2021/2,Chemistry
+Frontiers in Molecular Cell Biology,BIO3077,Bio,3,2,15,BIO2088,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3077&ay=2021/2,Cell
+Cellular Basis of Immunity,BIO3078,Bio,3,1,15,BIO2078 or BIO2088 or BIO2089,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3078&ay=2021/2,Cell
+Molecular Basis of Infection,BIO3079,Bio,3,1,15,BIO2078 or BIO2094,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3079&ay=2021/2,Cell
+Science Communication,BIO3082,Bio,3,2,15,BIO2071 or NSC2001,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3082&ay=2021/2,Misc
+Current Issues in Marine Biology,BIO3083,Bio,3,1,15,BIO2074,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3083&ay=2021/2,Animals and Marine
+Horizons of Biochemical Research,BIO3085,Bio,3,1,15,BIO2090 or BIO2086,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3085&ay=2021/2,Chemistry
+Cell Biology of Disease,BIO3086,Bio,3,1,15,BIO2088,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3086&ay=2021/2,Cell
+Organic Synthesis and Drug Design,BIO3089,Bio,3,1,15,BIO2085,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3089&ay=2021/2,Chemistry
+Secondary Metabolites,BIO3090,Bio,3,2,15,BIO2085,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3090&ay=2021/2,Cell
+Animal Developmental Biology,BIO3091,Bio,3,1,15,BIO1331,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3091&ay=2021/2,Animals and Marine
+Bioinformatics,BIO3092,Bio,3,2,15,BIO2092 or BIO2093 or BIO2087,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3092&ay=2021/2,Misc
+Energy Metabolism,BIO3093,Bio,3,2,15,BIO1332,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3093&ay=2021/2,Cell
+Biosciences Research Project,BIO3096,Bio,3,123,45,BIO2071,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3096&ay=2021/2,Misc
+Living in a Microbial World,BIO3097,Bio,3,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3097&ay=2021/2,Cell
+Biology of Marine Vertebrates,BIO3098,Bio,3,1,15,BIO1331 and BIO2082 or BIO1331 and BIO2074,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIO3098&ay=2021/2,Animals and Marine
+Professional Skills,BIOM509,Bio,4,12,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM509&ay=2021/2,Misc
+Secondary Metabolites,BIOM514,Bio,4,2,15,BIO2085 or NSC2001,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM514&ay=2021/2,Cell
+Cellular Basis of Immunity,BIOM515,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM515&ay=2021/2,Cell
+Bioinformatics,BIOM516,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM516&ay=2021/2,Misc
+Energy Metabolism,BIOM517,Bio,4,2,15,NSC1003,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM517&ay=2021/2,Cell
+Research Project (75 Credits),BIOM518,Bio,4,123,75,,BIOM527,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM518&ay=2021/2,Misc
+Molecular Basis of Infection,BIOM525,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM525&ay=2021/2,Cell
+Research Grant Proposal,BIOM527,Bio,4,1,15,,BIOM518,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM527&ay=2021/2,Misc
+Advanced topics in biological sciences,BIOM528,Bio,4,12,15,Warning,Warning,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM528&ay=2021/2,Misc
+Medical Mycology,BIOM534,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM534&ay=2021/2,Cell
+Ecology of Environmental Change,BIOM543,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM543&ay=2021/2,Ecology and plants
+Ecotoxicology,BIOM544,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM544&ay=2021/2,Misc
+Frontiers in Plant Biology,BIOM545,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM545&ay=2021/2,Ecology and plants
+Living in a Microbial World,BIOM546,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM546&ay=2021/2,Cell
+Frontiers in Molecular Cell Biology,BIOM547,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM547&ay=2021/2,Cell
+Cell Biology of Disease,BIOM548,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM548&ay=2021/2,Cell
+Advanced Laboratory Skills,BIOM549,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM549&ay=2021/2,Misc
+Research Project (45 Credits),BIOM550,Bio,4,123,45,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM550&ay=2021/2,Misc
+Biology of Marine Vertebrates,BIOM551,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM551&ay=2021/2,Animals and Marine
+Animal Development Biology,BIOM552,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM552&ay=2021/2,Animals and Marine
+Current Issues in Marine Biology,BIOM553,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM553&ay=2021/2,Animals and Marine
+Advanced Applications of Physiology,BIOM554,Bio,4,2,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM554&ay=2021/2,Animals and Marine
+Application of Genomics in Infectious Disease,BIOM567,Bio,4,3,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM567&ay=2021/2,Cell
+Blue Planet,BIOM568,Bio,4,1,15,,,https://biosciences.exeter.ac.uk/current/modules/description/index.php?moduleCode=BIOM568&ay=2021/2,Animals and Marine
+Mathematical Structures,MTH1001,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH1001,Pure
+Mathematical Methods,MTH1002,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH1002,Calculus
+Mathematical Modelling,MTH1003,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH1003,Modelling
+"Probability, Statistics and Data",MTH1004,Maths,1,12,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH1004,Probability and Statistics
+Diffrential Equations,MTH2003,Maths,2,1,15,MTH1002 or NSC1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2003,Calculus
+Vector Calculus and Applications,MTH2004,Maths,2,2,15,MTH1002 or NSC1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2004,Calculus
+Modelling: Theory and Practice,MTH2005,Maths,2,12,30,MTH1003 or NSC1002,MTH2003,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2005,Modelling
+Statistical Modelling and Inference,MTH2006,Maths,2,12,30,MTH1004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2006,Probability and Statistics
+Real Analysis,MTH2008,Maths,2,1,15,MTH1001 and MTH1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2008,Analysis
+Complex Analysis,MTH2009,Maths,2,2,15,MTH2008 ,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2009,Analysis
+"Groups, Rings and Fields",MTH2010,Maths,2,1,15,MTH1001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2010,Pure
+Linear Algebra,MTH2011,Maths,2,2,15,MTH1001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH2011,Pure
+Theory of Weather and Climate,MTH3001,Maths,3,2,15,MTH3007,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3001,Calculus
+Number Theory,MTH3004,Maths,3,1,15,MTH2002 or MTH2010,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3004,Pure
+Mathematical Biology and Ecology,MTH3006,Maths,3,1,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3006,Calculus
+Fluid Dynamics,MTH3007,Maths,3,1,15,MTH2004 and MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3007,Calculus
+Partial Diffrential Equations,MTH3008,Maths,3,2,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3008,Calculus
+Nonlinear Systems and Control,MTH3011,Maths,3,2,15,MTH2003 and MTH2005,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3011,Modelling
+Mathematics History and Culture,MTH3019,Maths,3,1,15,MTH1001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3019,Misc
+"Graphs, Networks and Algorithms",MTH3022,Maths,3,2,15,MTH2001 and MTH2002 or MTH2008 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3022,Pure
+Stochastic Processes,MTH3024,Maths,3,2,15,MTH1004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3024,Probability and Statistics
+Cryptography,MTH3026,Maths,3,2,15,MTH3004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3026,Pure
+Statistical Inference: Theory and Practice,MTH3028,Maths,3,1,15,MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3028,Probability and Statistics
+Mathematics of Climate Change,MTH3030,Maths,3,1,15,MTH1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3030,Calculus
+Applications of Geometry and Topology,MTH3032,Maths,3,2,15,MTH2004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3032,Calculus
+Galois Theory,MTH3038,Maths,3,1,15,MTH2002 or MTH2010 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3038,Pure
+Computational Nonlinear Dynamics,MTH3039,Maths,3,1,15,MTH2005 or MTH1003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3039,Modelling
+Topology and Metric Spaces,MTH3040,Maths,3,2,15,MTH2001 or MTH2008,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3040,Analysis
+"Bayesian Statistics, Philosophy and Practice",MTH3041,Maths,3,1,15,MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3041,Probability and Statistics
+Integral Equations,MTH3042,Maths,3,2,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3042,Calculus
+Bayesian Data Modelling,MTH3044 ,Maths,3,2,15,MTH2006 and MTH3041,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3044,Probability and Statistics
+Statistical Computing,MTH3045 ,Maths,3,2,15,MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3045,Probability and Statistics
+Mathematics for Environment and Sustainability ,MTH3047 ,Maths,3,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTH3047,Modelling
+Functional Analysis,MTHM001,Maths,4,1,15,MTH2001 or MTH2008,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM001,Analysis
+Methods for Stochastics and Finance,MTHM002,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM002,Analysis
+Analysis and Computation for Finance,MTHM003 ,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM003,Probability and Statistics
+Fractal Geometry,MTHM004,Maths,4,2,15,MTH2001 or MTH2008,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM004,Analysis
+Mathematical Sciences Project,MTHM005 ,Maths,4,12,30,Warning,Warning,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM005,Misc
+Mathematical Theory of Option Pricing,MTHM006,Maths,4,2,15,MTHM002 or MTH3024,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM006,Probability and Statistics
+Engaging with Research,MTHM007 ,Maths,4,12,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM007,Misc
+Computational Modelling,MTHM008,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM008,Modelling
+Advanced Topics in Mathematical & Computational Biology,MTHM009,Maths,4,2,15,MTH3039 or MTH3006,NSCM005 or MTHM018,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM009,Calculus
+Representation Theory of Finite Groups,MTHM010,Maths,4,1,15,MTH2002 or MTH2010 and MTH2011 ,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM010,Pure
+Advanced Topics in Statistics,MTHM017,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM017,Probability and Statistics
+Dynamical Systems and Chaos,MTHM018,Maths,4,1,15,MTH2003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM018,Calculus
+Fluid Dynamics of Atmospheres and Oceans,MTHM019,Maths,4,1,15,MTH3001,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM019,Calculus
+Advanced Mathematics Project,MTHM021 ,Maths,4,23,60,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM021,Misc
+Modelling the Weather and Climate,MTHM023,Maths,4,2,15,,MTHM019 ,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM023,Calculus
+Algebraic Number Theory,MTHM028,Maths,4,2,15,MTH3038 ,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM028,Pure
+Algebraic Curves,MTHM029,Maths,4,1,15,MTH2002 or MTH2010 and MTH2011,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM029,Pure
+"Waves, Instabilities and Turbulence",MTHM030,Maths,4,2,15,MTH3007,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM030,Calculus
+Magnetic Fields and Fluid Flows ,MTHM031,Maths,4,1,15,MTH3007,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM031,Calculus
+Statistical Modelling in Space and Time,MTHM033,Maths,4,2,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM033,Probability and Statistics
+Research in Mathematical Sciences,MTHM036 ,Maths,3,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM036,Misc
+Analytic Number Theory,MTHM041,Maths,4,1,15,MTH2001 or MTH2009,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM041,Analysis
+Space Weather and Plasmas,MTHM045,Maths,4,2,15,MTHM031,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM045,Calculus
+Statistical Thinking,MTHM046 ,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM046,Probability and Statistics
+"Bayesian Statistics, Philosophy and Practice",MTHM047 ,Maths,4,1,15,MTH1004 and MTH2006,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM047,Probability and Statistics
+Ergodic Theory,MTHM048,Maths,4,2,15,ECMM702 or MTH3024,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM048,Probability and Statistics
+Fundamentals of Weather and Climate Science,MTHM051 ,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM051,Modelling
+Mid-Latitude Weather Systems,MTHM052 ,Maths,4,2,15,MTH3001 or MTH051,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM052,Modelling
+Working with Data,MTHM501 ,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM501,Probability and Statistics
+Introduction to Data Science and Statistical Modelling,MTHM502 ,Maths,4,1,15,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/mathematics/modules/2021/index.php/?moduleCode=MTHM502,Probability and Statistics
+Mathematics and Computing: Integrative Tools for Natural Sciences ,NSC1002,NatSci,1,12,30,,NSC1003 and NSC1004 and NSC1005,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC1002&ay=2021/2,Coding
+Foundations in Natural Science,NSC1003,NatSci,1,12,60,,NSC1002 and NSC1004 and NSC1005,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC1003&ay=2021/2,Science
+Experimental Science,NSC1004,NatSci,1,12,15,,NSC1002 and NSC1003 and NSC1005,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC1004&ay=2021/2,Core
+Frontiers in Science 1,NSC1005,NatSci,1,12,15,,NSC1002 and NSC1003 and NSC1004 ,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC1005&ay=2021/2,Core
+Frontiers in Science 2,NSC2001,NatSci,2,12,30,NSC1002 and NSC1004 and NSC1005,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC2001&ay=2021/2,Core
+Physical Chemistry,NSC2002,NatSci,2,2,15,NSC1003,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC2002&ay=2021/2,Science
+Introduction to Numerics and Simulation for Scientists,NSC2003,NatSci,2,1,15,NSC1002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC2003&ay=2021/2,Coding
+BSC Research Project,NSC3001,NatSci,3,2,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC3001&ay=2021/2,Core
+Msci Research Project 1,NSC3002,NatSci,3,2,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC3002&ay=2021/2,Core
+Group Project,NSC3003,NatSci,3,1,30,,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC3003&ay=2021/2,Core
 Macromolecular and Supramolecular Chemistry,NSC3007,NatSci,3,1,15,NSC1003 or BIO1345 ,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC3007&ay=2021/2,Science
-Symmetry and Statistics of Molecules,NSC3008,NatSci,3,1,15,NSC2002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC3008&ay=2020/1,Science
-"Aerosols, Clouds and Climate",NSC3009,NatSci,3,2,15,NSC1002 or MTH1002 and MTH1004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSC3009&ay=2020/1,Science
-MSci Research Project 2 ,NSCM001,NatSci,4,12,60,NSC3002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSCM001&ay=2020/1,Core
-MSci Research Project 2 Extension,NSCM002,NatSci,4,2,15,NSC3002,NSCM001,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSCM002&ay=2020/1,Core
-Mathematical Modelling in Biology and Medicine,NSCM005,NatSci,4,1,15,MTH2003,PHY1026 and PHY2025 ,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSCM005&ay=2020/1 ,Coding
-Advanced Topics in Natural Sciences Chemistry I,NSCM006,NatSci,4,1,15,Warning,Warning,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSCM006&ay=2020/1,Science
-Advanced Topics in Natural Sciences Chemistry II,NSCM007,NatSci,4,2,15,Warning,Warning,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSCM007&ay=2020/1,Science
-Bioimaging,NSCM009,NatSci,4,1,15,NSC1003 or BIO1339,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2020/?moduleCode=NSCM009&ay=2020/1,Science
-Vector Mechanics,PHY1021,Phy,1,1,15,,PHY1025,https://newton.ex.ac.uk/handbook/modules/PHY1021.html,"Coding, Maths"
-Introduction to Astrophysics,PHY1022,Phy,1,1,15,,,https://newton.ex.ac.uk/handbook/modules/PHY1022.html,Astro
-Waves and Optics,PHY1023,Phy,1,2,15,PHY1021 and PHY1025,,https://newton.ex.ac.uk/handbook/modules/PHY1023.html,Misc
-Properties of Matter,PHY1024,Phy,1,2,15,PHY1021 and PHY1025,,https://newton.ex.ac.uk/handbook/modules/PHY1024.html,"Emag, Quantum, Condensed"
-Mathematics Skills,PHY1025,Phy,1,1,15,,,https://newton.ex.ac.uk/handbook/modules/PHY1025.html,"Coding, Maths"
-Mathematics for Physicists,PHY1026,Phy,1,2,15,PHY1025,,https://newton.ex.ac.uk/handbook/modules/PHY1026.html,"Coding, Maths"
-Practical Physics I,PHY1027,Phy,1,12,15,,PHY1021 and PHY1022 and PHY1023 and PHY1024,https://newton.ex.ac.uk/handbook/modules/PHY1027.html,Misc
-IT and Electronics Skills,PHY1028 ,Phy,1,12,15,,PHY1023,https://newton.ex.ac.uk/handbook/modules/PHY1028.html,"Coding, Maths"
-IT and Astrophysics Skills,PHY1029,Phy,1,12,15,PHY1022,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY1029.html,Astro
-Electromagnetism 1,PHY2021,Phy,2,1,15,PHY1026,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2021.html,"Emag, Quantum, Condensed"
-Quantum Mechanics 1,PHY2022,Phy,2,1,15,PHY1026,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2022.html,"Emag, Quantum, Condensed"
-Thermal Physics,PHY2023,Phy,2,2,15,PHY1024 and PHY1026,PHY2025,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2023.html,Misc
-Condensed Matter 1,PHY2024,Phy,2,2,15,PHY1024 and PHY2022,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2024.html,"Emag, Quantum, Condensed"
-Mathematics with Physical Applications,PHY2025,Phy,2,12,15,PHY1026,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2025.html,"Coding, Maths"
-Practical Physics II,PHY2026,Phy,2,12,15,PHY1027,PHY1021 and PHY1022 and PHY1023 and PHY1024,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2026.html,Misc
-Scientific Programming in C,PHY2027,Phy,2,1,15,PHY1025,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2027.html,"Coding, Maths"
-Physics of Living Systems,PHY2029,Phy,2,2,15,PHY1024,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2029.html,Misc
-Observing the Universe,PHY2030,Phy,2,2,15,PHY1021 and PHY1022,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2030.html,Astro
-Analytical and Chaotic Dynamics,PHY2032,Phy,2,2,15,PHY1021 and PHY1025,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2032.html,"Coding, Maths"
-Scientific Programming in Python,PHY2035,Phy,2,1,15,PHY1025,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY2035.html,"Coding, Maths"
-Electromagnetism II,PHY3051,Phy,3,1,15,PHY2021,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3051.html,"Emag, Quantum, Condensed"
-Nuclear and High Energy Particle Physics,PHY3052,Phy,3,2,15,PHY2022,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3052.html,"Emag, Quantum, Condensed"
-General Problems,PHY3053,Phy,3,12,15,PHY1021 and PHY1022 and PHY1023 and PHY1024 and PHY2021 and PHY2022 and PHY2023 and PHY2024,PHY3051 and PHYM002 and PHY3052,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3053.html,Misc
-The Biophysics of Cells and Tissues,PHY3061,Phy,3,1,15,PHY1021 and PHY1024 and PHY2023,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3061.html,Misc
-Methods of Theoretical Physics,PHY3062,Phy,3,1,15,PHY2025,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3062.html,Misc
-Nanostructures and Graphene Science,PHY3064,Phy,3,1,15,PHY2022 and PHY2024,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3064.html,Misc
-Galaxies and High Energy Astrophysics,PHY3066,Phy,3,2,15,PHY1021 and PHY1022,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3066.html,Astro
-Energy and the Environment,PHY3067,Phy,3,1,15,PHY2023,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3067.html,Misc
-Principles of Theoretical Physics,PHY3068,Phy,3,2,15,PHY2022 and PHY3051,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3068.html,Misc
-Ultrafast Physics,PHY3069,Phy,3,2,15,PHY2022 and PHY2024 and PHY3051,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3069.html,Misc
-Stars from Birth to Death,PHY3070,Phy,3,1,15,PHY1022 and PHY1026 and PHY2023,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3070.html,Astro
-Soft Matter,PHY3071,Phy,3,2,15,PHY1021 and PHY1024 and PHY2021 and PHY2023 and PHY2025,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3071.html,"Emag, Quantum, Condensed"
-Project and Dissertation (MPhys),PHY3122,Phy,3,23,30,,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3122.html ,Misc
-Projects and Dissertations (BSc),PHY3138,Phy,3,12,30,,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3138.html,Misc
-One-Semester Physics Project and Report,PHY3147,Phy,3,12,15,,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3147.html,Misc
-Applying Physics (Group Project),PHY3150,Phy,3,2,15,PHY2026 and PHY3147,,https://newton.ex.ac.uk/handbook/PHY/modules/PHY3150.html,Misc
-Statistical Physics,PHYM001,Phy,4,1,15,PHY2023,,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM001.html,"Coding, Maths"
-Quantum Mechanics II,PHYM002,Phy,4,1,15,PHY2022 and PHY2025,,https://newton.ex.ac.uk/handbook/20-21/modules/PHYM002.html,"Emag, Quantum, Condensed"
-Condensed Matter II,PHYM003,Phy,4,2,15,PHY2024 and PHY3051 and PHYM001,,https://newton.ex.ac.uk/handbook/20-21/modules/PHYM003.html,"Emag, Quantum, Condensed"
-Computational Physics and Modelling,PHYM004,Phy,4,12,15,PHY1028 and PHY2025 and PHY2027 or PHY1029 and PHY2025 and PHY2027,,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM004.html,"Coding, Maths"
-Independent Study,PHYM005,Phy,4,12,15,,,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM005.html,Misc
-Relativity and Cosmology,PHYM006,Phy,4,2,15,PHY1021 and PHY1022 and PHY2025,,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM006.html,Astro
-Physical Methods in Biology and Medicine,PHYM008,Phy,4,2,15,PHY2023 and PHY3051 and PHY3052,,https://newton.ex.ac.uk/handbook/20-21/modules/PHYM008.html,Misc
-Project and Dissertation,PHYM009,Phy,4,12,45,PHY3122,,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM009.html,Misc
-Solar and Extra Solar Planets and Their Atmospheres,PHYM012,Phy,4,1,15,PHY1021 and PHY1022 and PHY2023 and PHY3051,,https://newton.ex.ac.uk/handbook/20-21/modules/PHYM012.html,Astro
-Quantum Many Body Theory,PHYM013,Phy,4,1,15,PHY2024 and PHY3051 and PHYM002,PHYM001,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM013.html,"Emag, Quantum, Condensed"
-Quantum Optics and Photonics,PHYM015,Phy,4,2,15,PHY1023 and PHY2022 and PHY3051,,https://newton.ex.ac.uk/handbook/PHY/modules/PHYM015.html,"Emag, Quantum, Condensed"
+Symmetry and Statistics of Molecules,NSC3008,NatSci,3,1,15,NSC2002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC3008&ay=2021/2,Science
+"Aerosols, Clouds and Climate",NSC3009,NatSci,3,2,15,NSC1002 or MTH1002 and MTH1004,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSC3009&ay=2021/2,Science
+MSci Research Project 2 ,NSCM001,NatSci,4,12,60,NSC3002,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSCM001&ay=2021/2,Core
+MSci Research Project 2 Extension,NSCM002,NatSci,4,2,15,NSC3002,NSCM001,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSCM002&ay=2021/2,Core
+Mathematical Modelling in Biology and Medicine,NSCM005,NatSci,4,1,15,MTH2003,PHY1026 and PHY2025 ,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSCM005&ay=2021/2,Coding
+Advanced Topics in Natural Sciences Chemistry I,NSCM006,NatSci,4,1,15,Warning,Warning,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSCM006&ay=2021/2,Science
+Advanced Topics in Natural Sciences Chemistry II,NSCM007,NatSci,4,2,15,Warning,Warning,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSCM007&ay=2021/2,Science
+Bioimaging,NSCM009,NatSci,4,1,15,NSC1003 or BIO1339,,https://intranet.exeter.ac.uk/emps/studentinfo/subjects/naturalsciences/modules/2021/?moduleCode=NSCM009&ay=2021/2,Science
+Vector Mechanics,PHY1021,Phy,1,1,15,,PHY1025,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1021.html,"Coding, Maths"
+Introduction to Astrophysics,PHY1022,Phy,1,1,15,,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1022.html,Astro
+Waves and Optics,PHY1023,Phy,1,2,15,PHY1021 and PHY1025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1023.html,Misc
+Properties of Matter,PHY1024,Phy,1,2,15,PHY1021 and PHY1025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1024.html,"Emag, Quantum, Condensed"
+Mathematics Skills,PHY1025,Phy,1,1,15,,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1025.html,"Coding, Maths"
+Mathematics for Physicists,PHY1026,Phy,1,2,15,PHY1025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1026.html,"Coding, Maths"
+Practical Physics I,PHY1027,Phy,1,12,15,,PHY1021 and PHY1022 and PHY1023 and PHY1024,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1027.html,Misc
+IT and Electronics Skills,PHY1028 ,Phy,1,12,15,,PHY1023,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1028.html,"Coding, Maths"
+IT and Astrophysics Skills,PHY1029,Phy,1,12,15,PHY1022,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY1029.html,Astro
+Electromagnetism 1,PHY2021,Phy,2,1,15,PHY1026,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2021.html,"Emag, Quantum, Condensed"
+Quantum Mechanics 1,PHY2022,Phy,2,1,15,PHY1026,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2022.html,"Emag, Quantum, Condensed"
+Thermal Physics,PHY2023,Phy,2,2,15,PHY1024 and PHY1026,PHY2025,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2023.html,Misc
+Condensed Matter 1,PHY2024,Phy,2,2,15,PHY1024 and PHY2022,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2024.html,"Emag, Quantum, Condensed"
+Mathematics with Physical Applications,PHY2025,Phy,2,12,15,PHY1026,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2025.html,"Coding, Maths"
+Practical Physics II,PHY2026,Phy,2,12,15,PHY1027,PHY2021 and PHY2022 and PHY2023 and PHY2024,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2026.html,Misc
+Scientific Programming in C,PHY2027,Phy,2,1,15,PHY1025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2027.html,"Coding, Maths"
+Physics of Living Systems,PHY2029,Phy,2,2,15,PHY1024,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2029.html,Misc
+Observing the Universe,PHY2030,Phy,2,2,15,PHY1021 and PHY1022,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2030.html,Astro
+Analytical and Chaotic Dynamics,PHY2032,Phy,2,2,15,PHY1021 and PHY1026,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2032.html,"Coding, Maths"
+Scientific Programming in Python,PHY2035,Phy,2,1,15,PHY1025 and PHY2021,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2035.html,"Coding, Maths"
+Nonlinear Optics and Imaging,PHY2037,Phy,2,2,15,PHY1023 and PHY1026 and PHY2021,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY2037.html,Misc
+Electromagnetism II,PHY3051,Phy,3,1,15,PHY2021,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3051.html,"Emag, Quantum, Condensed"
+Nuclear and High Energy Particle Physics,PHY3052,Phy,3,2,15,PHY2022,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3052.html,"Emag, Quantum, Condensed"
+General Problems,PHY3053,Phy,3,12,15,PHY1021 and PHY1022 and PHY1023 and PHY1024 and PHY2021 and PHY2022 and PHY2023 and PHY2024,PHY3051 and PHY3052 and PHYM002 or PHY3051 and PHY3052 and PHY3055 ,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3053.html,Misc
+Electromagnetism and Quantum Mechanics,PHY3055,Phy,3,1,15,PHY2021 and PHY2022,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3055.html,"Emag, Quantum, Condensed"
+The Biophysics of Cells and Tissues,PHY3061,Phy,3,1,15,PHY1021 and PHY1024 and PHY2023,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3061.html,Misc
+Methods of Theoretical Physics,PHY3062,Phy,3,1,15,PHY2025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3062.html,Misc
+Nanostructures and Graphene Science,PHY3064,Phy,3,1,15,PHY2022 and PHY2024,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3064.html,Misc
+Galaxies and High Energy Astrophysics,PHY3066,Phy,3,2,15,PHY1021 and PHY1022,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3066.html,Astro
+Energy and the Environment,PHY3067,Phy,3,1,15,PHY2023,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3067.html,Misc
+Principles of Theoretical Physics,PHY3068,Phy,3,2,15,PHY2022 and PHY3051 or PHY2022 and PHY3055,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3068.html,Misc
+Stars from Birth to Death,PHY3070,Phy,3,1,15,PHY1022 and PHY1026 and PHY2023,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3070.html,Astro
+Soft Matter,PHY3071,Phy,3,2,15,PHY1021 and PHY1024 and PHY2021 and PHY2023 and PHY2025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3071.html,"Emag, Quantum, Condensed"
+Project and Dissertation (MPhys),PHY3122,Phy,3,23,30,,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3122.html,Misc
+Projects and Dissertations (BSc),PHY3138,Phy,3,12,30,,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3138.html,Misc
+One-Semester Physics Project and Report,PHY3147,Phy,3,12,15,,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3147.html,Misc
+Applying Physics (Group Project),PHY3150,Phy,3,2,15,PHY2026 and PHY3147,,https://newton.ex.ac.uk/handbook/21-22/modules/PHY3150.html,Misc
+Statistical Physics,PHYM001,Phy,4,1,15,PHY2023,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM001.html,"Coding, Maths"
+Quantum Mechanics II,PHYM002,Phy,4,1,15,PHY2022 and PHY2025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM002.html,"Emag, Quantum, Condensed"
+Condensed Matter II,PHYM003,Phy,4,2,15,PHY2024 and PHY3051 and PHYM001,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM003.html,"Emag, Quantum, Condensed"
+Computational Physics and Modelling,PHYM004,Phy,4,12,15,PHY1028 and PHY2025 and PHY2027 or PHY1029 and PHY2025 and PHY2027,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM004.html,"Coding, Maths"
+Independent Study,PHYM005,Phy,4,12,15,,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM005.html,Misc
+Relativity and Cosmology,PHYM006,Phy,4,2,15,PHY1021 and PHY1022 and PHY2025,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM006.html,Astro
+Physical Methods in Biology and Medicine,PHYM008,Phy,4,2,15,PHY2023 and PHY3051 and PHY3052,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM008.html,Misc
+Project and Dissertation (45 credits),PHYM009,Phy,4,12,45,PHY3122,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM009.html,Misc
+Project and Dissertation (60 credits),PHYM010,Phy,4,12,60,PHY3205 or PHY3307,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM010.html,Misc
+Solar and Extra Solar Planets and Their Atmospheres,PHYM012,Phy,4,1,15,PHY1021 and PHY1022 and PHY2023 and PHY3051,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM012.html,Astro
+Quantum Many Body Theory,PHYM013,Phy,4,1,15,PHY2024 and PHY3051 and PHYM002,PHYM001,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM013.html,"Emag, Quantum, Condensed"
+Quantum Optics and Photonics,PHYM015,Phy,4,2,15,PHY1023 and PHY2022 and PHY3051,,https://newton.ex.ac.uk/handbook/21-22/modules/PHYM015.html,"Emag, Quantum, Condensed"
